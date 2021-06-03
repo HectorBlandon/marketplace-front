@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.getBanners();
-    this.getProducts("featured");
+    this.getProducts("destacados");
     this.getBrands();
   }
 
@@ -38,22 +38,22 @@ export class HomeComponent implements OnInit {
   }
 
   public getProducts(type){
-    if(type == "featured" && !this.featuredProducts){
+    if(type == "destacados" && !this.featuredProducts){
       this.appService.getProducts("featured").subscribe(data=>{
         this.featuredProducts = data;      
       }) 
     }
-    if(type == "on sale" && !this.onSaleProducts){
+    if(type === "en venta" && !this.onSaleProducts){
       this.appService.getProducts("on-sale").subscribe(data=>{
         this.onSaleProducts = data;      
       })
     }
-    if(type == "top rated" && !this.topRatedProducts){
+    if(type === "los más valorados" && !this.topRatedProducts){
       this.appService.getProducts("top-rated").subscribe(data=>{
         this.topRatedProducts = data;      
       })
     }
-    if(type == "new arrivals" && !this.newArrivalsProducts){
+    if(type == "los recién llegados" && !this.newArrivalsProducts){
       this.appService.getProducts("new-arrivals").subscribe(data=>{
         this.newArrivalsProducts = data;      
       })

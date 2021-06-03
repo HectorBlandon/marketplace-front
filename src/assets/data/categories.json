@@ -1,5 +1,5 @@
 [
-    { "id": 1, "name": "All Categories", "hasSubCategory": false, "parentId": 0 },
+    { "id": 1, "name": "todas las categorias", "hasSubCategory": false, "parentId": 0 },
     { "id": 20, "name": "Fashion", "hasSubCategory": true, "parentId": 0 },
     { "id": 30, "name": "Women", "hasSubCategory": true, "parentId": 20 },
     { "id": 31, "name": "Dresses & Skirts", "hasSubCategory": false, "parentId": 30 },

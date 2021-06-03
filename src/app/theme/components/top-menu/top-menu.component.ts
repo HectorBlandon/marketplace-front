@@ -40,6 +40,8 @@ export class TopMenuComponent implements OnInit {
     }
     else if(lang == 'tr'){
       return 'Turkish';
+    } else if(lang == 'sp'){
+      return 'Spanish';
     }
     else{
       return 'English';

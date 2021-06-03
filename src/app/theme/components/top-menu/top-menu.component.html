@@ -1,6 +1,6 @@
 <div class="top-menu">    
 
-    <a mat-button [matMenuTriggerFor]="currencyMenu" #currencyMenuTrigger="matMenuTrigger">
+    <!-- <a mat-button [matMenuTriggerFor]="currencyMenu" #currencyMenuTrigger="matMenuTrigger">
         {{currency}}<mat-icon class="mat-icon-sm caret">arrow_drop_down</mat-icon>
     </a>
     <mat-menu #currencyMenu="matMenu" [overlapTrigger]="false" xPosition="before" class="app-dropdown">
@@ -9,9 +9,9 @@
                 <span>{{cur}}</span>
             </button>
         </span>
-    </mat-menu> 
+    </mat-menu> --> 
 
-    <a mat-button [matMenuTriggerFor]="langMenu" #langMenuTrigger="matMenuTrigger"> 
+    <!-- <a mat-button [matMenuTriggerFor]="langMenu" #langMenuTrigger="matMenuTrigger"> 
         <img [src]="'assets/images/flags/'+translateService.currentLang+'.svg'" width="18" [alt]="translateService.currentLang">   
         <span fxShow="false" fxShow.gt-sm class="flag-menu-title">{{getLangText(translateService.currentLang)}}</span>
         <mat-icon class="mat-icon-sm caret">arrow_drop_down</mat-icon>
@@ -23,7 +23,7 @@
                 <span class="px-1">{{getLangText(lang)}}</span>   
             </button> 
         </span>
-    </mat-menu>
+    </mat-menu> -->
 
     <span fxShow="false" fxShow.gt-sm>
         <a mat-button routerLink="/compare">{{ 'COMPARE' | translate }} <span *ngIf="settings.rtl">&rlm;</span>({{appService.Data.compareList.length}})</a>
@@ -44,23 +44,23 @@
             <div class="divider"></div>
             <a mat-menu-item routerLink="/account"> 
                 <mat-icon class="mat-icon-sm">settings</mat-icon>
-                <span>Account Settings</span> 
+                <span>Configuraciones de la cuenta</span> 
             </a>
-            <a mat-menu-item routerLink="/compare" fxHide="false" fxHide.gt-sm>
+            <!-- <a mat-menu-item routerLink="/compare" fxHide="false" fxHide.gt-sm>
                 <mat-icon class="mat-icon-sm">compare</mat-icon>
                 <span>Compare <span *ngIf="settings.rtl">&rlm;</span>({{appService.Data.compareList.length}})</span> 
-            </a>
+            </a> -->
             <a mat-menu-item routerLink="/wishlist" fxHide="false" fxHide.gt-sm>
                 <mat-icon class="mat-icon-sm">favorite</mat-icon>
-                <span>Wishlist <span *ngIf="settings.rtl">&rlm;</span>({{appService.Data.wishList.length}})</span>
+                <span>Lista de deseos<span *ngIf="settings.rtl">&rlm;</span>({{appService.Data.wishList.length}})</span>
             </a>
-            <a mat-menu-item routerLink="/"> 
+            <!-- <a mat-menu-item routerLink="/"> 
                 <mat-icon class="mat-icon-sm">lock</mat-icon>
                 <span>Lock screen</span> 
-            </a>
+            </a> -->
             <a mat-menu-item routerLink="/"> 
                 <mat-icon class="mat-icon-sm">help</mat-icon>
-                <span>Help</span> 
+                <span>Ayuda</span> 
             </a>
             <div class="divider"></div>
             <a mat-menu-item routerLink="/sign-in"> 
