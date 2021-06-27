@@ -1,0 +1,44 @@
+
+$md-primates: (
+    50 : #e2e6e8,
+    100 : #b6c0c5,
+    200 : #85969f,
+    300 : #546b78,
+    400 : #2f4c5b,
+    500 : #0a2c3e,
+    600 : #092738,
+    700 : #072130,
+    800 : #051b28,
+    900 : #03101b,
+    A100 : #59a7ff,
+    A200 : #268bff,
+    A400 : #0071f2,
+    A700 : #0065d9,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+$primates-primary: mat.define-palette($md-primates, 500, 50, 900);
+$primates-accent: mat.define-palette(mat.$grey-palette, 300, 100, 700);
+$primates-warn: mat.define-palette(mat.$red-palette, 500, A200, 800);
+
+$primates-theme: mat.define-light-theme((
+    color: (
+        primary: $primates-primary, 
+        accent: $primates-accent,
+        warn: $primates-warn,
+    )
+));

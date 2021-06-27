@@ -19,6 +19,7 @@ export class LandingComponent implements OnInit {
   } 
 
   public getDemo(number){
+    console.log('el numero es:', number);
     if(number == 1){ 
       this.settings.theme = 'green';
       this.settings.rtl = false;

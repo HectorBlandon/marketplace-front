@@ -9,8 +9,9 @@ import { Settings, AppSettings } from '../../../app.settings';
 export class OptionsComponent {
   public showOptions:boolean = false;
   public settings: Settings;
-  constructor(public appSettings:AppSettings) { 
-    this.settings = this.appSettings.settings; 
+  constructor(public appSettings:AppSettings) {
+    this.settings = this.appSettings.settings;
+    console.log('EL tema es: ',  this.appSettings.settings);
   }
 
   public changeTheme(theme){

@@ -33,4 +33,9 @@
         @include mat.all-component-colors($grey-theme);
         @include theme-reset($grey-theme);
     }
+    &.primates{
+        @import "skins/primates";
+        @include mat.all-component-colors($primates-theme);
+        @include theme-reset($primates-theme);
+    }
 }
