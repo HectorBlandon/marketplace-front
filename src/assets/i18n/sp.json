@@ -1,11 +1,27 @@
 {   
     "WELCOME": "¡Bienvenidos a nuestro mercado!", 
-    "LOGIN": "Iniciar sesión", 
+    "LOGIN": {
+      "SIGNIN": "Iniciar sesión",
+      "EMAIL": "Correo electrónico",
+      "PASSWORD": "Contraseña"
+    },
+    "SINGUPNOW": {
+      "SINGNOW": "¿No tienes una cuenta? ¡Regístrate ahora!",
+      "FULLNAME": "Nombre completo",
+      "GENDER": "Género",
+      "BORNDATE": "fecha de nacimiento",
+      "CITY": "Municipio",
+      "ADDRESS":"Dirección Domicilio",
+      "EMAIL": "Correo electrónico",
+      "PASSWORD": "Contraseña",
+      "PASSWORDCONFIRM": "Confirmar contraseña",
+      "MOBILE": "Número celular"
+    },
     "LOGOUT": "Cerrar sesión", 
     "REGISTER": "Registrarse",
     "ACCOUNT": "Cuenta", 
     "COMPARE": "Comparar",
-    "WISHLIST": "Lista de deseos", 
+    "WISHLIST": "Lista de deseos",
     "NAV": {  
       "HOME": "Inicio",  
       "PAGES": "Paginas", 

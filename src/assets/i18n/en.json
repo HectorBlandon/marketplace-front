@@ -1,6 +1,22 @@
 {   
   "WELCOME": "Welcome to our market!", 
-  "LOGIN": "Sign In", 
+  "LOGIN": {
+    "SIGNIN": "Sign In",
+    "EMAIL": "Email",
+    "PASSWORD": "Password"
+  },
+  "SINGUPNOW": {
+    "SINGNOW": "Don't have an account? Sign up now!",
+    "FULLNAME": "Full name",
+    "GENDER": "Gender",
+    "BORNDATE": "Born date",
+    "CITY": "City",
+    "ADDRESS":"home address",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "PASSWORDCONFIRM": "Confirm password",
+    "MOBILE": "Mobile number"
+  }, 
   "LOGOUT": "Logout", 
   "REGISTER": "Register",
   "ACCOUNT": "Account", 
