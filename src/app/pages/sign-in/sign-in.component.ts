@@ -10,8 +10,11 @@ import { emailValidator, matchingPasswords } from '../../theme/utils/app-validat
   styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent implements OnInit {
+  
   loginForm: FormGroup;
   registerForm: FormGroup;
+  public Listgenero;
+  public ListCity;
 
   constructor(public formBuilder: FormBuilder, public router:Router, public snackBar: MatSnackBar) { }
 
@@ -23,10 +26,26 @@ export class SignInComponent implements OnInit {
 
     this.registerForm = this.formBuilder.group({
       'name': ['', Validators.compose([Validators.required, Validators.minLength(3)])],
+      'gender': ['', Validators.required],
+      'birthday': null,
+      'city': ['', Validators.required],
+      'address': ['', Validators.required],
       'email': ['', Validators.compose([Validators.required, emailValidator])],
       'password': ['', Validators.required],
       'confirmPassword': ['', Validators.required]
     },{validator: matchingPasswords('password', 'confirmPassword')});
+
+    this.Listgenero = [
+      {description: "Masculino", value: 1},
+      {description: "Femenino", value: 2},
+      {description: "Otro", value: 3},
+    ];
+
+    this.ListCity = [
+      {description: "Circasia", value: 1},
+      {description: "Armenia", value: 2},
+      {description: "Tebaida", value: 3},
+    ];
 
   }
 
