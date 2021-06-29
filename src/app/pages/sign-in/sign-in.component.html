@@ -46,10 +46,16 @@
             <h2 class="text-muted text-center">{{ 'SINGUPNOW.SINGNOW' | translate }}</h2>
             <form [formGroup]="registerForm" (ngSubmit)="onRegisterFormSubmit(registerForm.value)">
                 <mat-form-field  appearance="outline" class="w-100 mt-2">
-                    <mat-label>{{ 'SINGUPNOW.FULLNAME' | translate }}</mat-label>
+                    <mat-label>{{ 'SINGUPNOW.FIRSTNAME' | translate }}</mat-label>
                     <input matInput formControlName="name" required>
-                    <mat-error *ngIf="registerForm.controls.name.errors?.required">Se requiere el nombre completo</mat-error>
-                    <mat-error *ngIf="registerForm.controls.name.hasError('minlength')">El nombre completo no es lo suficientemente largo, mínimo de 3 caracteres</mat-error>
+                    <mat-error *ngIf="registerForm.controls.name.errors?.required">El nombre es requerido</mat-error>
+                    <mat-error *ngIf="registerForm.controls.name.hasError('minlength')">El nombre no es lo suficientemente largo, mínimo de 3 caracteres</mat-error>
+                </mat-form-field>
+                <mat-form-field  appearance="outline" class="w-100 mt-2">
+                    <mat-label>{{ 'SINGUPNOW.LASTNAME' | translate }}</mat-label>
+                    <input matInput formControlName="lastName" required>
+                    <mat-error *ngIf="registerForm.controls.lastName.errors?.required">El apellido es requerido</mat-error>
+                    <mat-error *ngIf="registerForm.controls.lastName.hasError('minlength')">El apellido completo no es lo suficientemente largo, mínimo de 3 caracteres</mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="outline" class="w-100">
                     <mat-label>{{ 'SINGUPNOW.GENDER' | translate }}</mat-label>
@@ -70,7 +76,7 @@
                 <mat-form-field  appearance="outline" class="w-100 mt-1">
                     <mat-label>{{ 'SINGUPNOW.EMAIL' | translate }}</mat-label>
                     <input matInput placeholder="ejemplo@primates.com" formControlName="email" required>
-                    <mat-error *ngIf="registerForm.controls.email.errors?.required">Correo electrónico es requerido</mat-error>
+                    <mat-error *ngIf="registerForm.controls.email.errors?.required">Correo electrónico requerido</mat-error>
                     <mat-error *ngIf="registerForm.controls.email.hasError('invalidEmail')">Correo electrónico invalido</mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="outline" class="w-100">

@@ -26,6 +26,7 @@ export class SignInComponent implements OnInit {
 
     this.registerForm = this.formBuilder.group({
       'name': ['', Validators.compose([Validators.required, Validators.minLength(3)])],
+      'lastName': ['', Validators.compose([Validators.required, Validators.minLength(3)])],
       'gender': ['', Validators.required],
       'birthday': null,
       'city': ['', Validators.required],

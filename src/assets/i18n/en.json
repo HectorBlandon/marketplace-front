@@ -4,16 +4,20 @@
   "ACCOUNTINFO": "Account Information",
   "ADDRESSES": "Addresses",
   "ORDERS": "Orders",
+  "ACOUNTDETAILS": "Account details",
   "LOGIN": {
     "SIGNIN": "Sign In",
     "EMAIL": "Email",
     "PASSWORD": "Password",
     "LOGOUT": "Logout",
-    "CHANGEPASSWORD": "Change password"
+    "CHANGEPASSWORD": "Change password",
+    "CURRENTPASSWORD": "Current Password",
+    "NEWPASSWORD": "New Password"
   },
   "SINGUPNOW": {
     "SINGNOW": "Don't have an account? Sign up now!",
-    "FULLNAME": "Full name",
+    "FIRSTNAME": "First Name",
+    "LASTNAME": "Last Name",
     "GENDER": "Gender",
     "BORNDATE": "Born date",
     "CITY": "City",
@@ -75,6 +79,7 @@
     "CANCEL": "Cancel",
     "UPLOAD": "Upload",
     "REMOVE": "Remove",
+    "CHANGE": "Change",
     "YES": "Yes",
     "NO": "No",
     "OK": "OK"
