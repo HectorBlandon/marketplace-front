@@ -5,16 +5,17 @@
             <form [formGroup]="loginForm" (ngSubmit)="onLoginFormSubmit(loginForm.value)">
                 <mat-form-field appearance="outline" class="w-100 mt-2">
                     <mat-label>{{ 'LOGIN.EMAIL' | translate }}</mat-label>
-                    <input matInput placeholder="Email" formControlName="email" required>
+                    <input matInput placeholder="ejemplo@primates.com" formControlName="email" required>
                     <mat-error *ngIf="loginForm.controls.email.errors?.required">Correo electrónico es requerido</mat-error>
                     <mat-error *ngIf="loginForm.controls.email.hasError('invalidEmail')">Correo electrónico invalido</mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="outline" class="w-100 mt-1">
                     <mat-label>{{ 'LOGIN.PASSWORD' | translate }}</mat-label>
-                    <input matInput placeholder="Password" formControlName="password" required>
+                    <input matInput placeholder="******" formControlName="password" required>
                     <mat-error *ngIf="loginForm.controls.password.errors?.required">Contraseña requerida</mat-error>
                     <mat-error *ngIf="loginForm.controls.password.hasError('minlength')">La contraseña no es lo suficientemente larga, mínimo de 6 caracteres</mat-error>
-                </mat-form-field> 
+                </mat-form-field>
+
                 <div class="text-center mt-2">
                     <button mat-fab color="primary" class="mat-elevation-z6" (click)="onLoginFormSubmit(loginForm.value)">
                         <mat-icon>exit_to_app</mat-icon>
@@ -46,7 +47,7 @@
             <form [formGroup]="registerForm" (ngSubmit)="onRegisterFormSubmit(registerForm.value)">
                 <mat-form-field  appearance="outline" class="w-100 mt-2">
                     <mat-label>{{ 'SINGUPNOW.FULLNAME' | translate }}</mat-label>
-                    <input matInput placeholder="Full Name" formControlName="name" required>
+                    <input matInput formControlName="name" required>
                     <mat-error *ngIf="registerForm.controls.name.errors?.required">Se requiere el nombre completo</mat-error>
                     <mat-error *ngIf="registerForm.controls.name.hasError('minlength')">El nombre completo no es lo suficientemente largo, mínimo de 3 caracteres</mat-error>
                 </mat-form-field>
@@ -61,13 +62,14 @@
                     <mat-error *ngIf="registerForm.controls.name.errors?.required || registerForm.controls.gender.value != ''">El genero es requerido</mat-error>                    
                 </mat-form-field>
                 <mat-form-field class="w-100">
-                    <input matInput [matDatepicker]="birthday" placeholder="fecha de nacimiento" formControlName="birthday">
+                    <mat-label>{{ 'SINGUPNOW.BORNDATE' | translate }}</mat-label>
+                    <input matInput [matDatepicker]="birthday" placeholder="Ejemplo: 12/06/1996" formControlName="birthday">
                     <mat-datepicker-toggle matSuffix [for]="birthday"></mat-datepicker-toggle>
                     <mat-datepicker #birthday></mat-datepicker>
                 </mat-form-field>
                 <mat-form-field  appearance="outline" class="w-100 mt-1">
                     <mat-label>{{ 'SINGUPNOW.EMAIL' | translate }}</mat-label>
-                    <input matInput placeholder="Email" formControlName="email" required>
+                    <input matInput placeholder="ejemplo@primates.com" formControlName="email" required>
                     <mat-error *ngIf="registerForm.controls.email.errors?.required">Correo electrónico es requerido</mat-error>
                     <mat-error *ngIf="registerForm.controls.email.hasError('invalidEmail')">Correo electrónico invalido</mat-error>
                 </mat-form-field>
@@ -83,19 +85,18 @@
                 </mat-form-field>
                 <mat-form-field  appearance="outline" class="w-100 mt-2">
                     <mat-label>{{ 'SINGUPNOW.ADDRESS' | translate }}</mat-label>
-                    <input matInput placeholder="Full Name" formControlName="address" required>
-                    <mat-error *ngIf="registerForm.controls.name.errors?.required">Se requiere el nombre completo</mat-error>
-                    <mat-error *ngIf="registerForm.controls.name.hasError('minlength')">El nombre completo no es lo suficientemente largo, mínimo de 3 caracteres</mat-error>
-                </mat-form-field>
+                    <input matInput placeholder="Ejemplo: Av. centenario calle 6 # 03-22" formControlName="address" required>
+                    <mat-error *ngIf="registerForm.controls.address.errors?.required">La dirección de domicilio es requerida</mat-error>
+                    </mat-form-field>
                 <mat-form-field  appearance="outline" class="w-100 mt-1">
                     <mat-label>{{ 'SINGUPNOW.PASSWORD' | translate }}</mat-label>
-                    <input matInput placeholder="Password" formControlName="password" type="password" minlength="6" required>
+                    <input matInput placeholder="******" formControlName="password" type="password" minlength="6" required>
                     <mat-error *ngIf="registerForm.controls.password.errors?.required">Contraseña requerida</mat-error>
                     <mat-error *ngIf="registerForm.controls.password.hasError('minlength')">La contraseña no es lo suficientemente larga, mínimo de 6 caracteres</mat-error>
                 </mat-form-field> 
                 <mat-form-field  appearance="outline" class="w-100 mt-1">
                     <mat-label>{{ 'SINGUPNOW.PASSWORDCONFIRM' | translate }}</mat-label>
-                    <input matInput placeholder="Confirm Password" formControlName="confirmPassword" type="password" required>
+                    <input matInput placeholder="******" formControlName="confirmPassword" type="password" required>
                     <mat-error *ngIf="registerForm.controls.confirmPassword.errors?.required">Confirmar contraseña es requerida</mat-error>
                     <mat-error *ngIf="registerForm.controls.confirmPassword.hasError('mismatchedPasswords')">Las contraseñas no coinciden</mat-error>
                 </mat-form-field>

@@ -1,9 +1,15 @@
 {   
-    "WELCOME": "¡Bienvenidos a nuestro mercado!", 
+    "WELCOME": "¡Bienvenidos a nuestro mercado!",
+    "MYACCOUNT" : "Mi cuenta",
+    "ACCOUNTINFO": "Información de la cuenta",
+    "ADDRESSES": "Direcciones de envío",
+    "ORDERS": "Pedidos",
     "LOGIN": {
       "SIGNIN": "Iniciar sesión",
       "EMAIL": "Correo electrónico",
-      "PASSWORD": "Contraseña"
+      "PASSWORD": "Contraseña",
+      "LOGOUT": "Cerrar sesión",
+      "CHANGEPASSWORD": "Cambiar contraseña"
     },
     "SINGUPNOW": {
       "SINGNOW": "¿No tienes una cuenta? ¡Regístrate ahora!",
@@ -17,7 +23,7 @@
       "PASSWORDCONFIRM": "Confirmar contraseña",
       "MOBILE": "Número celular"
     },
-    "LOGOUT": "Cerrar sesión", 
+     
     "REGISTER": "Registrarse",
     "ACCOUNT": "Cuenta", 
     "COMPARE": "Comparar",
