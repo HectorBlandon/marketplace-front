@@ -4,7 +4,12 @@
     "ACCOUNTINFO": "Información de la cuenta",
     "ADDRESSES": "Direcciones de envío",
     "ORDERS": "Pedidos",
+    "ORDER": "N° Pedido",
+    "DATE": "Fecha",
+    "STATUS": "Estado",
+    "TOTAL": "Total",
     "ACOUNTDETAILS": "Detalles de la cuenta",
+    "POSTALCODE": "Código postal",
     "LOGIN": {
       "SIGNIN": "Iniciar sesión",
       "EMAIL": "Correo electrónico",
@@ -20,12 +25,14 @@
       "LASTNAME": "Apellido",
       "GENDER": "Género",
       "BORNDATE": "fecha de nacimiento",
-      "CITY": "Municipio",
+      "CITY": "Ciudad",
       "ADDRESS":"Dirección Domicilio",
+      "ADDRESS2":"Dirección",
       "EMAIL": "Correo electrónico",
       "PASSWORD": "Contraseña",
       "PASSWORDCONFIRM": "Confirmar contraseña",
-      "MOBILE": "Número celular"
+      "MOBILE": "Teléfono",
+      "PHONE": "Teléfono"
     },
      
     "REGISTER": "Registrarse",

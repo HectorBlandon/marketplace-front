@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AppService } from '../../../app.service';
+import { emailValidator, matchingPasswords } from '../../../theme/utils/app-validators';
+
 
 @Component({
   selector: 'app-addresses',
@@ -9,9 +11,10 @@ import { AppService } from '../../../app.service';
   styleUrls: ['./addresses.component.scss']
 })
 export class AddressesComponent implements OnInit {
-  billingForm: FormGroup;
-  shippingForm: FormGroup;
-  countries = [];
+  public billingForm: FormGroup;
+  public shippingForm: FormGroup;
+  public countries = [];
+  public ListCity = [];
   constructor(public appService:AppService, public formBuilder: FormBuilder, public snackBar: MatSnackBar) { }
 
   ngOnInit() {
@@ -21,8 +24,8 @@ export class AddressesComponent implements OnInit {
       'lastName': ['', Validators.required],
       'middleName': '',
       'company': '',
-      'email': ['', Validators.required],
-      'phone': ['', Validators.required],
+      'email': ['', Validators.compose([Validators.required, emailValidator])],
+      'phone': ['', Validators.compose([Validators.required, Validators.minLength(3)])],
       'country': ['', Validators.required],
       'city': ['', Validators.required],
       'state': '',
@@ -42,6 +45,11 @@ export class AddressesComponent implements OnInit {
       'zip': ['', Validators.required],
       'address': ['', Validators.required]
     });
+    this.ListCity = [
+      {description: "Circasia", value: 1},
+      {description: "Armenia", value: 2},
+      {description: "Tebaida", value: 3},
+    ];
   }
 
   public onBillingFormSubmit(values:Object):void {

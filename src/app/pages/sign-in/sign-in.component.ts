@@ -33,6 +33,7 @@ export class SignInComponent implements OnInit {
       'address': ['', Validators.required],
       'email': ['', Validators.compose([Validators.required, emailValidator])],
       'password': ['', Validators.required],
+      'phone': ['',  Validators.compose([Validators.required, Validators.minLength(6)])],
       'confirmPassword': ['', Validators.required]
     },{validator: matchingPasswords('password', 'confirmPassword')});
 

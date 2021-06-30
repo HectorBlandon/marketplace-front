@@ -5,7 +5,7 @@
             <mat-form-field class="w-100 mt-2">
                 <mat-label>{{ 'SINGUPNOW.FIRSTNAME' | translate }}</mat-label>
                 <input matInput formControlName="firstName" required>
-                <mat-error *ngIf="infoForm.controls.firstName.errors?.required">El nombre es requerido</mat-error>
+                <mat-error *ngIf="infoForm.controls.firstName.errors?.required">El nombre es obligatorio</mat-error>
                 <mat-error *ngIf="infoForm.controls.firstName.hasError('minlength')">El nombre no es lo suficientemente largo, mínimo de 3 caracteres</mat-error>
             </mat-form-field>
             <mat-form-field class="w-100 mt-1">
@@ -31,19 +31,19 @@
             <mat-form-field class="w-100 mt-2">
                 <mat-label>{{ 'LOGIN.CURRENTPASSWORD' | translate }}</mat-label>
                 <input matInput  formControlName="currentPassword" type="password" minlength="6" required>
-                <mat-error *ngIf="passwordForm.controls.currentPassword.errors?.required">Contraseña actual requerida</mat-error>
+                <mat-error *ngIf="passwordForm.controls.currentPassword.errors?.required">Contraseña actual es obligatoria</mat-error>
                 <mat-error *ngIf="passwordForm.controls.currentPassword.hasError('minlength')">La contraseña actual no es lo suficientemente larga, mínimo de 6 caracteres</mat-error>
             </mat-form-field>
             <mat-form-field class="w-100 mt-1">
                 <mat-label>{{ 'LOGIN.NEWPASSWORD' | translate }}</mat-label>
                 <input matInput formControlName="newPassword" type="password" minlength="6" required>
-                <mat-error *ngIf="passwordForm.controls.newPassword.errors?.required">Nueva contraseña requerida</mat-error>
+                <mat-error *ngIf="passwordForm.controls.newPassword.errors?.required">Nueva contraseña es obligatoria</mat-error>
                 <mat-error *ngIf="passwordForm.controls.newPassword.hasError('minlength')">La nueva contraseña no es lo suficientemente larga, mínimo de 6 caracteres</mat-error>
             </mat-form-field> 
             <mat-form-field class="w-100 mt-1">
                 <mat-label>{{ 'SINGUPNOW.PASSWORDCONFIRM' | translate }}</mat-label>
               <input matInput formControlName="confirmNewPassword" type="password" required>
-              <mat-error *ngIf="passwordForm.controls.confirmNewPassword.errors?.required">Confirmar la nueva contraseña es requerida</mat-error>
+              <mat-error *ngIf="passwordForm.controls.confirmNewPassword.errors?.required">Confirmar la nueva contraseña es obligatoria</mat-error>
               <mat-error *ngIf="passwordForm.controls.confirmNewPassword.hasError('mismatchedPasswords')">Las contraseñas no coinciden</mat-error>
             </mat-form-field>
             <div class="text-center mt-2">

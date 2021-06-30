@@ -80,6 +80,12 @@
                     <mat-error *ngIf="registerForm.controls.email.hasError('invalidEmail')">Correo electrónico invalido</mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>{{ 'SINGUPNOW.PHONE' | translate }}</mat-label>
+                      <input matInput placeholder="334704 - 3135660000" formControlName="phone" required>
+                      <mat-error *ngIf="registerForm.controls.phone.errors?.required">Teléfono es requerido</mat-error>
+                      <mat-error *ngIf="registerForm.controls.phone.hasError('minlength')">El número de teléfono es invalido, mínimo de 6 caracteres</mat-error>    
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
                     <mat-label>{{ 'SINGUPNOW.CITY' | translate }}</mat-label>
                     <mat-select formControlName="city">
                         <mat-option [value]="">-</mat-option>
@@ -87,7 +93,7 @@
                             <span>{{type.description}}</span>
                         </mat-option>
                     </mat-select>
-                    <mat-error *ngIf="registerForm.controls.name.errors?.required || registerForm.controls.gender.value != ''">El municipio es requerido</mat-error>                    
+                    <mat-error *ngIf="registerForm.controls.city.errors?.required || registerForm.controls.city.value != ''">La ciudad es requerida</mat-error>                    
                 </mat-form-field>
                 <mat-form-field  appearance="outline" class="w-100 mt-2">
                     <mat-label>{{ 'SINGUPNOW.ADDRESS' | translate }}</mat-label>
