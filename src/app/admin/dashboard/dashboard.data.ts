@@ -162,22 +162,22 @@ export const refunds = [
 
 export const montly_sales = [
   {
-    "name": "Offline Stores",
+    "name": "Cerveza",
     "value": 178
   },
   {
-    "name": "Digital Stores",
+    "name": "Ron",
     "value": 340
   },
   {
-    "name": "Others",
+    "name": "Otros",
     "value": 280
   }
 ]
 
 export const analytics = [
   {
-    name: 'Company 1',
+    name: 'Producto 1',
     series: [
       {
         name: '2010',
@@ -214,7 +214,7 @@ export const analytics = [
     ]
   },
   {
-    name: 'Company 2',
+    name: 'Producto 2',
     series: [
       {
         name: '2010',
@@ -251,7 +251,7 @@ export const analytics = [
     ]
   },
   {
-    name: 'Company 3',
+    name: 'Producto 3',
     series: [
       {
         name: '2010',

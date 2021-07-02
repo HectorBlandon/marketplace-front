@@ -65,8 +65,8 @@ export class CustomersComponent implements OnInit {
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
       maxWidth: "400px",
       data: {
-        title: "Confirm Action",
-        message: "Are you sure you want remove this customer?"
+        title: "Confirmar acción",
+        message: "¿Está seguro de que desea eliminar a este empleado?"
       }
     }); 
     dialogRef.afterClosed().subscribe(dialogResult => { 

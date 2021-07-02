@@ -10,6 +10,7 @@
     "TOTAL": "Total",
     "ACOUNTDETAILS": "Detalles de la cuenta",
     "POSTALCODE": "Código postal",
+    "REQUIRED": "El campo es requerido",
     "LOGIN": {
       "SIGNIN": "Iniciar sesión",
       "EMAIL": "Correo electrónico",
@@ -70,7 +71,7 @@
       "ORDERS": "Pedidos",
       "TRANSACTIONS": "Transacciones",
       "USERS": "Usuarios", 
-      "CUSTOMERS": "Clientes", 
+      "CUSTOMERS": "Empleados", 
       "COUPONS": "Cupones",
       "WITHDRAWAL": "Retirar dinero",
       "ANALYTICS": "Estadísticas",
@@ -78,7 +79,11 @@
       "FOLLOWERS": "Seguidores",
       "SUPPORT": "Suporte",
       "REVIEWS": "Reseñas", 
-      "EXTERNAL_LINK": "Enlace externo" 
+      "EXTERNAL_LINK": "Enlace externo",
+      "PROFILE": "Perfil",
+      "EDITPROFILE": "Editar perfil",
+      "SETTINGS": "Ajustes",
+      "HELP": "Ayuda"
     },
     "BTN": {
       "ADD": "Agregar",
@@ -105,5 +110,35 @@
       "PREV_PAGE": "Pagina anterior",
       "FIRST_PAGE": "Primera página",
       "LAST_PAGE": "Última página"
+    },
+    "GAPHICS" :{
+      "MONTLYSALES": "Ventas mensuales",
+      "EXPLODESLICES": "Dividir secciones",
+      "SHOWLABELS": "Mostrar etiquetas",
+      "ANALYTICS": "Informes análisis",
+      "PROFIT": "Ganancias"
+    },
+    "CATEGORIES": {
+      "SUBCATEGORY": "Subcategotía",
+      "CATEGORYLIST": "Lista categorías",
+      "NAME": "Nombre",
+      "PARENTCATEGORY": "Categoría principal",
+      "EDIT": "Editar",
+      "DELETE":"Eliminar",
+      "ADDCATEGORY": "Agregar categoría"
+    },
+    "EMPLOYEE": {
+      "EMPLOYEESLIST": "Lista empleados",
+      "ADDEMPLOYEE": "Agregar empleado",
+      "NUMBER": "#",
+      "FULLNAME": "Nombre completo",
+      "USERNAME": "Usuario",
+      "EMAIL": "Email",
+      "POSITION":  "Cargo",
+      "PASSWORD": "Contraseña",
+      "NUMBERORDERS": "Número de ordenes",
+      "REVENUE": "Ingresos",
+      "OPTIONS": "Opciones"
+
     }
   }

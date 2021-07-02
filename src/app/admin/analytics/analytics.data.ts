@@ -220,15 +220,15 @@ export const daily_views_stats = [
 
 export const montly_sales = [
   {
-    "name": "Offline Stores",
+    "name": "Cerveza",
     "value": 178
   },
   {
-    "name": "Digital Stores",
+    "name": "Ron",
     "value": 340
   },
   {
-    "name": "Others",
+    "name": "Otros",
     "value": 280
   }
 ];
