@@ -180,31 +180,31 @@ export const analytics = [
     name: 'Producto 1',
     series: [
       {
-        name: '2010',
+        name: 'Enero',
         value: 31632
       },
       {
-        name: '2011',
+        name: 'Febrero',
         value: 42589
       },
       {
-        name: '2012',
+        name: 'Marzo',
         value: 52458
       },
       {
-        name: '2013',
+        name: 'Abril',
         value: 69632
       },
       {
-        name: '2014',
+        name: 'Mayo',
         value: 52305
       },
       {
-        name: '2015',
+        name: 'Junio',
         value: 72412
       },
       {
-        name: '2016',
+        name: 'Julio',
         value: 66285
       },
       {
@@ -217,31 +217,31 @@ export const analytics = [
     name: 'Producto 2',
     series: [
       {
-        name: '2010',
+        name: 'Enero',
         value: 61632
       },
       {
-        name: '2011',
+        name: 'Febrero',
         value: 68589
       },
       {
-        name: '2012',
+        name: 'Marzo',
         value: 55458
       },
       {
-        name: '2013',
+        name: 'Abril',
         value: 62632
       },
       {
-        name: '2014',
+        name: 'Mayo',
         value: 38305
       },
       {
-        name: '2015',
+        name: 'Junio',
         value: 41412
       },
       {
-        name: '2016',
+        name: 'Julio',
         value: 32285
       },
       {
@@ -254,31 +254,31 @@ export const analytics = [
     name: 'Producto 3',
     series: [
       {
-        name: '2010',
+        name: 'Enero',
         value: 55632
       },
       {
-        name: '2011',
+        name: 'Febrero',
         value: 63589
       },
       {
-        name: '2012',
+        name: 'Marzo',
         value: 70458
       },
       {
-        name: '2013',
+        name: 'Abril',
         value: 79632
       },
       {
-        name: '2014',
+        name: 'Mayo',
         value: 59305
       },
       {
-        name: '2015',
+        name: 'Junio',
         value: 56412
       },
       {
-        name: '2016',
+        name: 'Julio',
         value: 49285
       },
       {

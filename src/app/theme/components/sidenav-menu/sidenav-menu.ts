@@ -43,6 +43,4 @@ export const sidenavMenuItems = [
     new SidenavMenu (141, 'Level 2', null, null, null, true, 140),
     new SidenavMenu (142, 'Level 3', null, null, null, true, 141),
     new SidenavMenu (143, 'Level 4', null, null, null, true, 142),
-    new SidenavMenu (144, 'Level 5', null, 'http://themeseason.com', null, false, 143),
-    new SidenavMenu (200, 'NAV.EXTERNAL_LINK', null, 'http://themeseason.com', '_blank', false, 0)
 ]

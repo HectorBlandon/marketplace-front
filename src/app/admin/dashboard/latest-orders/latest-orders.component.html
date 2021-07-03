@@ -1,7 +1,7 @@
 <mat-card class="p-0">
     <div class="mat-table admin-table header-sm truncated">
         <div class="mat-header-row">
-            <div class="mat-header-cell"> {{'ORDERS' | translate}} </div>
+            <div class="mat-header-cell"> {{'ORDERS.ORDERS' | translate}} </div>
             <div class="mat-header-cell">{{'DATE' | translate}}</div>
             <div class="mat-header-cell">{{'STATUS' | translate}}</div>
             <div class="mat-header-cell">{{'TOTAL' | translate}}</div>
@@ -14,10 +14,10 @@
             <div class="mat-cell">{{order.total}}</div>     
             <div class="mat-cell">
                 <div class="p-1 actions">          
-                    <button mat-mini-fab color="primary" matTooltip="View">
+                    <button mat-mini-fab color="primary" matTooltip="Ver detalles">
                         <mat-icon>remove_red_eye</mat-icon>
                     </button>
-                    <button *ngIf="order.invoice" mat-mini-fab color="warn" matTooltip="View invoice" class="btn-invoice">
+                    <button *ngIf="order.invoice" mat-mini-fab color="warn" matTooltip="Ver factura" class="btn-invoice">
                         <mat-icon>receipt</mat-icon>
                     </button>
                 </div>

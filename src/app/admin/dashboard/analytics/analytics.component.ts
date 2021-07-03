@@ -12,10 +12,10 @@ export class AnalyticsComponent implements OnInit {
   public showYAxis = true;
   public gradient = false;
   public showLegend = false;
-  public showXAxisLabel = false;
-  public xAxisLabel = 'Year';
-  public showYAxisLabel = false;
-  public yAxisLabel = 'Profit';
+  public showXAxisLabel = true;
+  public xAxisLabel = 'Meses';
+  public showYAxisLabel = true;
+  public yAxisLabel = 'Dinero';
   public colorScheme = {
     domain: ['#283593', '#039BE5', '#FF5252']
   }; 

@@ -5,8 +5,8 @@ import { PagesComponent } from './pages/pages.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
-    { 
-        path: '', 
+    {
+        path: '',
         component: PagesComponent, children: [
             { path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
             { path: 'account', loadChildren: () => import('./pages/account/account.module').then(m => m.AccountModule), data: { breadcrumb: 'Account Settings' } },

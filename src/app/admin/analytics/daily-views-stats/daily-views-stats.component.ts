@@ -6,25 +6,25 @@ import { daily_views_stats } from '../analytics.data';
   templateUrl: './daily-views-stats.component.html',
   styleUrls: ['./daily-views-stats.component.scss']
 })
-export class DailyViewsStatsComponent { 
+export class DailyViewsStatsComponent {
   public daily_views_stats: any[];
   public showXAxis = true;
   public showYAxis = true;
   public gradient = false;
   public showLegend = false;
   public showXAxisLabel = true;
-  public xAxisLabel = 'Days';
+  public xAxisLabel = 'Dias';
   public showYAxisLabel = true;
-  public yAxisLabel = 'Views';
+  public yAxisLabel = 'Vistas';
   public colorScheme = {
     domain: ['#2F3E9E', '#D22E2E', '#378D3B', '#0096A6', '#F47B00', '#606060']
-  }; 
-  public autoScale = true; 
-  
-  constructor() { 
-    Object.assign(this, {daily_views_stats})   
+  };
+  public autoScale = true;
+
+  constructor() {
+    Object.assign(this, {daily_views_stats});
   }
-  
+
   onSelect(event) {
     console.log(event);
   }

@@ -2,12 +2,7 @@
   "WELCOME": "Welcome to our market!",
   "MYACCOUNT" : "My Account",
   "ACCOUNTINFO": "Account Information",
-  "ADDRESSES": "Addresses",
-  "ORDERS": "Orders",
-  "ORDER": "Order",
-  "DATE": "Date",
-  "STATUS": "Status",
-  "TOTAL": "Total",
+  "ADDRESSES": "Addresses",  
   "ACOUNTDETAILS": "Account details",
   "POSTALCODE": "Postal code",
   "REQUIRED": "El campo es requerido",
@@ -81,7 +76,9 @@
     "PROFILE": "Profile",
     "EDITPROFILE": "Edit Profile",
     "SETTINGS": "Settings",
-    "HELP": "Help"
+    "HELP": "Help",
+    "GALLERY": "Gallery",
+    "MAXIMAGEN": "(Max 8 imagen)"
   },
   "BTN": {
     "ADD": "Add",
@@ -114,7 +111,14 @@
     "EXPLODESLICES": "Explode Slices ",
     "SHOWLABELS": "Show Labels",
     "ANALYTICS": "Analytics",
-    "PROFIT": "Profit"
+    "PROFIT": "Profit",
+    "SALES": "Sales",
+    "PRODUCTS": "Products",
+    "SALESSUMMARY": "Sales Summary",
+    "DAILYVIEWS": "Daily Views Stats",
+    "MOSTVIEW": "Most Viewed Products",
+    "TRANSACTIONS": "Transactions",
+    "REFUNDSPRODUCTS": "Refunds by Products"
   },
   "CATEGORIES": {
     "SUBCATEGORY": "Subcategory",
@@ -125,6 +129,35 @@
     "EDIT": "Edit",
     "DELETE":"delete",
     "ADDCATEGORY": "Add Category"
+  },
+  "PRODUCT": {
+    "NAME": "Name",
+    "CATEGORY": "Category",
+    "OLDPRICE": "Old price",
+    "NEWPRICE": "New price",
+    "DISCOUNT": "Discount",
+    "AVALBILITYCOUN": "Avalibility count",
+    "PRODUCTCOLOR": "Color",
+    "PRODUCTSIZE": "Size",
+    "WEIGTH": "Weigth",
+    "DESCRIPTION": "Description"
+  },
+  "ORDERS": {
+    "ORDERLIST": "Order list",
+    "ORDERS": "Orders",
+    "ORDER": "Order",
+    "DATE": "Date",
+    "STATUS": "Status",
+    "TOTAL": "Total"
+  },
+  "TRANSACTIONS": {
+    "TRANSLIST": "Transactions List",
+    "ORDERID": "OrderId",
+      "TRANSACTIONID": "TransactionId",
+      "DATE": "Date",
+      "PAYMENTMETHOD": "Payment Method",
+      "STATUS": "Status",
+      "AMOUNT": "Amount"
   },
   "EMPLOYEE": {
     "EMPLOYEESLIST": "Employees list",

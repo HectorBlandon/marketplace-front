@@ -13,9 +13,9 @@ export class TransactionsComponent {
   public gradient = false;
   public showLegend = false;
   public showXAxisLabel = true;
-  public xAxisLabel = 'Store';
+  public xAxisLabel = 'Productos';
   public showYAxisLabel = true;
-  public yAxisLabel = 'Transactions';
+  public yAxisLabel = 'Transacciones';
   public colorScheme = {
     domain: ['#3F51B5', '#E91E63', '#43A047', '#FDD835', '#F4511E', '#606060']
   };   
