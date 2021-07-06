@@ -9,13 +9,13 @@ import { ConfirmDialogComponent } from 'src/app/shared/confirm-dialog/confirm-di
 })
 export class FollowersComponent implements OnInit {
   public followers = [
-    { id: 1, image: 'assets/images/profile/michael.jpg', name: 'Michael Blair', storeId: 1 },
-    { id: 2, image: 'assets/images/profile/tereza.jpg', name: 'Tereza Stiles', storeId: 2 },
-    { id: 3, image: 'assets/images/profile/adam.jpg', name: 'Adam Sandler', storeId: 1 },
-    { id: 4, image: 'assets/images/profile/julia.jpg', name: 'Julia Aniston', storeId: 2 },
-    { id: 5, image: 'assets/images/profile/bruno.jpg', name: 'Bruno Vespa', storeId: 2 },
-    { id: 6, image: 'assets/images/profile/ashley.jpg', name: 'Ashley Ahlberg', storeId: 1 },
-    { id: 7, image: 'assets/images/avatars/avatar-5.png', name: 'Michelle Ormond', storeId: 1 }
+    { id: 1, image: 'assets/images/profile/michael.jpg', name: 'Michael Blando', storeId: 1 },
+    { id: 2, image: 'assets/images/profile/tereza.jpg', name: 'Tereza Santos', storeId: 2 },
+    { id: 3, image: 'assets/images/profile/adam.jpg', name: 'Andres Soto', storeId: 1 },
+    { id: 4, image: 'assets/images/profile/julia.jpg', name: 'Juliana Ramirez', storeId: 2 },
+    { id: 5, image: 'assets/images/profile/bruno.jpg', name: 'Brayan Contreras', storeId: 2 },
+    { id: 6, image: 'assets/images/profile/ashley.jpg', name: 'Alejandra Marin', storeId: 1 },
+    { id: 7, image: 'assets/images/avatars/avatar-5.png', name: 'Michelle Ortiz', storeId: 1 }
   ];
   public stores = [
     { id: 1, name: 'Store 1' },

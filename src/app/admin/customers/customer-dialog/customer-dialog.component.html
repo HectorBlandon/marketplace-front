@@ -1,43 +1,43 @@
-<h1 mat-dialog-title>Customer</h1>
+<h1 mat-dialog-title> {{'EMPLOYEE.EMPLOYEE' | translate}} </h1>
 <form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
     <div mat-dialog-content> 
         <mat-tab-group class="tab-content-wrapped">
-            <mat-tab label="General Info"> 
+            <mat-tab label="Información General"> 
                 <div fxLayout="row wrap" class="mt-2">
                     <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
                         <mat-form-field appearance="outline" class="w-100">
-                            <mat-label>First name</mat-label>
-                            <input matInput placeholder="First name" formControlName="firstName" required>
+                            <mat-label>{{'EMPLOYEE.FIRSTNAME' | translate}}</mat-label>
+                            <input matInput  formControlName="firstName" required>
                             <mat-error *ngIf="form.controls.firstName.errors?.required">{{'REQUIRED' | translate}}</mat-error>   
                         </mat-form-field>
                     </div>
                     <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
                         <mat-form-field appearance="outline" class="w-100">
-                            <mat-label>Last name</mat-label>
-                            <input matInput placeholder="Last name" formControlName="lastName" required>
+                            <mat-label>{{'EMPLOYEE.LASTNAME' | translate}}</mat-label>
+                            <input matInput  formControlName="lastName" required>
                             <mat-error *ngIf="form.controls.lastName.errors?.required">{{'REQUIRED' | translate}}</mat-error>
                         </mat-form-field>
                     </div>
-                    <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
+                    <!-- <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>Middle Name/Initial</mat-label>
                             <input matInput placeholder="Middle Name/Initial" formControlName="middleName">
                         </mat-form-field>
-                    </div>
+                    </div> -->
                     <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
                         <mat-form-field appearance="outline" class="w-100">
-                            <mat-label>Username</mat-label>
-                            <input matInput placeholder="Username" formControlName="username" required> 
+                            <mat-label>{{'EMPLOYEE.USERNAME' | translate}}</mat-label>
+                            <input matInput placeholder="Nombre de usuario" formControlName="username" required> 
                             <mat-error *ngIf="form.controls.username.errors?.required">{{'REQUIRED' | translate}}</mat-error>
                         </mat-form-field>
                     </div>
                     <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
                         <mat-form-field appearance="outline" class="w-100">
-                            <mat-label>Email</mat-label>
-                            <input matInput placeholder="Email" formControlName="email"> 
+                            <mat-label>{{'EMPLOYEE.EMAIL' | translate}}</mat-label>
+                            <input matInput placeholder="Ejemplo: abcd@primayes.com" formControlName="email"> 
                         </mat-form-field>
                     </div>
-                    <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
+                    <!-- <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>Store</mat-label>
                             <mat-select formControlName="storeId">
@@ -47,67 +47,67 @@
                                 </mat-option>
                             </mat-select> 
                         </mat-form-field>
-                    </div>
+                    </div> -->
                     <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
                         <mat-form-field appearance="outline" class="w-100">
-                            <mat-label>Wallet Balance ($)</mat-label>
+                            <mat-label>{{'EMPLOYEE.PASSWORD' | translate}}</mat-label>
                             <input matInput formControlName="walletBalance">
                         </mat-form-field>
                     </div>
                     <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
                         <mat-form-field appearance="outline" class="w-100">
-                            <mat-label>Revenue ($)</mat-label>
+                            <mat-label>{{'EMPLOYEE.PASSWORDCONFIRM' | translate}}</mat-label>
                             <input matInput formControlName="revenue">
                         </mat-form-field>
                     </div>
                 </div>  
             </mat-tab>
-            <mat-tab label="Billing" formGroupName="billing">
+            <mat-tab label="Información personal" formGroupName="billing">
                 <div fxLayout="row wrap" class="mt-2">
                     <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
                       <mat-form-field appearance="outline" class="w-100">
-                          <mat-label>First name</mat-label>
-                          <input matInput placeholder="First name" formControlName="firstName" required>
+                          <mat-label>{{'EMPLOYEE.FIRSTNAME' | translate}}</mat-label>
+                          <input matInput formControlName="firstName" required>
                           <mat-error *ngIf="form.get('billing')['controls'].firstName.errors?.required">{{'REQUIRED' | translate}}</mat-error>   
                       </mat-form-field>
                     </div>
                     <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
                       <mat-form-field appearance="outline" class="w-100">
-                          <mat-label>Last name</mat-label>
-                          <input matInput placeholder="Last name" formControlName="lastName" required>
+                          <mat-label>{{'EMPLOYEE.LASTNAME' | translate}}</mat-label>
+                          <input matInput  formControlName="lastName" required>
                           <mat-error *ngIf="form.get('billing')['controls'].lastName.errors?.required">{{'REQUIRED' | translate}}</mat-error>
                       </mat-form-field>
                     </div>
-                    <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
+                    <!-- <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
                       <mat-form-field appearance="outline" class="w-100">
                           <mat-label>Middle Name/Initial</mat-label>
                           <input matInput placeholder="Middle Name/Initial" formControlName="middleName">
                       </mat-form-field>
-                    </div>
-                    <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
+                    </div> -->
+                    <!-- <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
                       <mat-form-field appearance="outline" class="w-100">
                           <mat-label>Company</mat-label>
                           <input matInput placeholder="Company" formControlName="company">
                       </mat-form-field>
-                    </div>
+                    </div> -->
                     <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
                       <mat-form-field appearance="outline" class="w-100">
-                          <mat-label>Email</mat-label>
-                          <input matInput placeholder="Email" formControlName="email" required>
+                          <mat-label>{{'EMPLOYEE.EMAIL' | translate}}</mat-label>
+                          <input matInput placeholder="Ejemplo: abcd@primayes.com" formControlName="email" required>
                           <mat-error *ngIf="form.get('billing')['controls'].email.errors?.required">{{'REQUIRED' | translate}}</mat-error>
                       </mat-form-field>
                     </div>
                     <div fxFlex="100" fxFlex.gt-sm="33.3" class="px-1">
                       <mat-form-field appearance="outline" class="w-100">
-                          <mat-label>Phone</mat-label>
-                          <input matInput placeholder="Phone" formControlName="phone" required>
+                          <mat-label>{{'EMPLOYEE.MOBILE' | translate}}</mat-label>
+                          <input matInput placeholder="334773 - 312220XXXX" formControlName="phone" required>
                           <mat-error *ngIf="form.get('billing')['controls'].phone.errors?.required">{{'REQUIRED' | translate}}</mat-error>
                       </mat-form-field>
                     </div>
                     <div fxFlex="100" fxFlex.gt-sm="25" class="px-1">
                       <mat-form-field appearance="outline" class="w-100">
-                          <mat-label>Country</mat-label>
-                            <mat-select placeholder="Country" formControlName="country" required [compareWith]="compareFunction">
+                          <mat-label>{{'EMPLOYEE.CITY' | translate}}</mat-label>
+                            <mat-select placeholder="Ciudad" formControlName="City" required [compareWith]="compareFunction">
                                 <mat-option [value]="">-</mat-option>
                                 <mat-option *ngFor="let country of data.countries" [value]="country">
                                     {{country.name}}
@@ -116,7 +116,7 @@
                             <mat-error *ngIf="form.get('billing')['controls'].country.errors?.required">{{'REQUIRED' | translate}}</mat-error>
                       </mat-form-field>
                     </div>
-                    <div fxFlex="100" fxFlex.gt-sm="25" class="px-1">
+                    <!-- <div fxFlex="100" fxFlex.gt-sm="25" class="px-1">
                       <mat-form-field appearance="outline" class="w-100">
                           <mat-label>City</mat-label>
                           <input matInput placeholder="City" formControlName="city" required>
@@ -135,11 +135,11 @@
                           <input matInput placeholder="Zip/Postal Code" formControlName="zip" required>
                           <mat-error *ngIf="form.get('billing')['controls'].zip.errors?.required">{{'REQUIRED' | translate}}</mat-error>
                       </mat-form-field>
-                    </div>
+                    </div> -->
                     <div fxFlex="100" class="px-1">
                       <mat-form-field appearance="outline" class="w-100">
-                          <mat-label>Address</mat-label>
-                          <input matInput placeholder="Address (street, apartment, suite, unit etc.)" formControlName="address" required>
+                          <mat-label>{{'EMPLOYEE.ADDRESS2' | translate}}</mat-label>
+                          <input matInput placeholder="Dirección (calle, apartamento, suite, unidad, etc.)" formControlName="address" required>
                           <mat-error *ngIf="form.get('billing')['controls'].address.errors?.required">{{'REQUIRED' | translate}}</mat-error>
                       </mat-form-field>
                     </div>
@@ -149,8 +149,8 @@
     </div>
     <div mat-dialog-actions>
         <div fxLayout="row" fxLayoutAlign="space-between center" class="w-100"> 
-            <button mat-raised-button color="warn" type="button" mat-dialog-close>Close</button>
-            <button mat-raised-button color="primary" type="submit">Save</button>
+            <button mat-raised-button color="warn" type="button" mat-dialog-close>{{'BTN.CLOSE' | translate}}</button>
+            <button mat-raised-button color="primary" type="submit">{{'BTN.SAVE' | translate}}</button>
         </div> 
     </div>
 </form>

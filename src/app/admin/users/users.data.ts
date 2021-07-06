@@ -4,302 +4,302 @@ export class UsersData implements InMemoryDbService {
     const users = [
         {
             id: 1,
-            username: "pretty",
-            password: "pretty123",
+            username: 'Alejandra',
+            password: 'Alejandra123',
             profile: {
-                name: "Ashley",
-                surname: "Ahlberg",
-                birthday: new Date(1981,2,29),
-                gender: "female",
-                image: "assets/images/profile/ashley.jpg"
+                name: 'Alejandra',
+                surname: 'Alzate',
+                birthday: new Date(1981, 2, 29),
+                gender: 'Femenino',
+                image: 'assets/images/profile/ashley.jpg'
+            },
+            contacts: {
+                email: 'Alejandra@gmail.com',
+                phone: '(036) 756-9756',
+                address: 'Armenia'
             },
             work: {
-                company: "Google",
-                position: "Product designer",
+                company: 'Google',
+                position: 'Product designer',
                 salary: 5000
             },
-            contacts:{
-                email: "ashley@gmail.com",
-                phone: "(202) 756-9756",
-                address: "Washington"
-            },
             social: {
-                facebook:"",
-                twitter:"",
-                google:""
+                facebook: '',
+                twitter: '',
+                google: ''
             },
-            settings:{
+            settings: {
                 isActive: true,
                 isDeleted: false,
-                registrationDate: "2012-10-13T12:20:40.511Z",
-                joinedDate: "2017-04-21T18:25:43.511Z"
+                registrationDate: '2012-10-13T12:20:40.511Z',
+                joinedDate: '2017-04-21T18:25:43.511Z'
             }
         },
         {
             id: 2,
-            username: "bruno.V",
-            password: "bruno123",
+            username: 'Camilo.V',
+            password: 'Camilo123',
             profile: {
-                name: "Bruno",
-                surname: "Vespa",
-                birthday: new Date(1992,11,20),
-                gender: "male",
-                image: "assets/images/profile/bruno.jpg"
+                name: 'Camilo',
+                surname: 'Velez',
+                birthday: new Date(1992, 11, 20),
+                gender: 'Masculino',
+                image: 'assets/images/profile/bruno.jpg'
+            },
+            contacts: {
+                email: 'Camilo@gmail.com',
+                phone: '(034) 231-0332',
+                address: 'Circasia'
             },
             work: {
-                company: "Dell EMC",
-                position: "Sale manager",
-                salary: 17000
-            },
-            contacts:{
-                email: "bruno@dell.com",
-                phone: "(415) 231-0332",
-                address: "San Francisco"
+                company: 'Google',
+                position: 'Product designer',
+                salary: 5000
             },
             social: {
-                facebook:"",
-                twitter:"",
-                google:""
+                facebook: '',
+                twitter: '',
+                google: ''
             },
-            settings:{
+            settings: {
                 isActive: false,
                 isDeleted: false,
-                registrationDate: "2011-01-05T08:45:23.511Z",
-                joinedDate: "2017-05-20T18:25:43.511Z"
+                registrationDate: '2011-01-05T08:45:23.511Z',
+                joinedDate: '2017-05-20T18:25:43.511Z'
             }
         },
         {
             id: 3,
-            username: "andy.79",
-            password: "andy123",
+            username: 'Andres.79',
+            password: 'Andres123',
             profile: {
-                name: "Andy",
-                surname: "Warhol",
-                birthday: new Date(1979,10,21),
-                gender: "male",
-                image: "assets/images/avatars/avatar-3.png"
+                name: 'Andres',
+                surname: 'Montes',
+                birthday: new Date(1979, 10, 21),
+                gender: 'Masculino',
+                image: 'assets/images/avatars/avatar-3.png'
+            },
+            contacts: {
+                email: 'Andres@gmail.com',
+                phone: '(033) 457-2308',
+                address: 'Tebaida'
             },
             work: {
-                company: "Adecco",
-                position: "Product manager",
-                salary: 13000
-            },
-            contacts:{
-                email: "andy@adecco.com",
-                phone: "(212) 457-2308",
-                address: "New York"
+                company: 'Google',
+                position: 'Product designer',
+                salary: 5000
             },
             social: {
-                facebook:"",
-                twitter:"",
-                google:""
+                facebook: '',
+                twitter: '',
+                google: ''
             },
-            settings:{
+            settings: {
                 isActive: true,
                 isDeleted: false,
-                registrationDate: "2014-11-01T19:35:43.511Z",
-                joinedDate: "2017-06-28T15:25:43.511Z"
-            } 
+                registrationDate: '2014-11-01T19:35:43.511Z',
+                joinedDate: '2017-06-28T15:25:43.511Z'
+            }
         },
         {
             id: 4,
-            username: "julia.a",
-            password: "julia123",
+            username: 'julia.a',
+            password: 'julia123',
             profile: {
-                name: "Julia",
-                surname: "Aniston",
-                birthday: new Date(1982,6,18),
-                gender: "female",
-                image: "assets/images/profile/julia.jpg"
+                name: 'Julia',
+                surname: 'Aristizabal',
+                birthday: new Date(1982, 6, 18),
+                gender: 'Femenino',
+                image: 'assets/images/profile/julia.jpg'
+            },
+            contacts: {
+                email: 'julia@apple.com',
+                phone: '(036) 267-1346',
+                address: 'Illinois, Chicago'
             },
             work: {
-                company: "Apple",
-                position: "Sales manager",
-                salary: 18000
-            },
-            contacts:{
-                email: "julia@apple.com",
-                phone: "(224) 267-1346",
-                address: "Illinois, Chicago"
+                company: 'Google',
+                position: 'Product designer',
+                salary: 5000
             },
             social: {
-                facebook:"",
-                twitter:"",
-                google:""
+                facebook: '',
+                twitter: '',
+                google: ''
             },
-            settings:{
+            settings: {
                 isActive: true,
                 isDeleted: false,
-                registrationDate: "2015-12-06T11:10:20.511Z",
-                joinedDate: "2017-06-29T15:15:40.511Z"
-            } 
+                registrationDate: '2015-12-06T11:10:20.511Z',
+                joinedDate: '2017-06-29T15:15:40.511Z'
+            }
         },
         {
             id: 5,
-            username: "lusia.m",
-            password: "lusia123",
+            username: 'Luisa.m',
+            password: 'Luisa123',
             profile: {
-                name: "Lusia",
-                surname: "Manuel",
-                birthday: new Date(1992,12,2),
-                gender: "female",
-                image: "assets/images/avatars/avatar-7.png"
+                name: 'Luisa',
+                surname: 'Monte',
+                birthday: new Date(1992, 12, 2),
+                gender: 'Femenino',
+                image: 'assets/images/avatars/avatar-7.png'
+            },
+            contacts: {
+                email: 'Luisa@gmail.com',
+                phone: '(034) 267-1346',
+                address: 'Circasia'
             },
             work: {
-                company: "Alphabet",
-                position: "Office manager",
-                salary: 10000
-            },
-            contacts:{
-                email: "lusia@alphabet.com",
-                phone: "(224) 267-1346",
-                address: "California, Los Angeles"
+                company: 'Google',
+                position: 'Product designer',
+                salary: 5000
             },
             social: {
-                facebook:"",
-                twitter:"",
-                google:""
+                facebook: '',
+                twitter: '',
+                google: ''
             },
-            settings:{
+            settings: {
                 isActive: true,
                 isDeleted: true,
-                registrationDate: "2014-01-10T10:20:20.511Z",
-                joinedDate: "2017-06-28T12:20:40.511Z"
-            } 
+                registrationDate: '2014-01-10T10:20:20.511Z',
+                joinedDate: '2017-06-28T12:20:40.511Z'
+            }
         },
         {
             id: 6,
-            username: "adam.82",
-            password: "adam123",
+            username: 'Alberto.82',
+            password: 'Alberto123',
             profile: {
-                name: "Adam",
-                surname: "Sandler",
-                birthday: new Date(1987,12,24),
-                gender: "male",
-                image: "assets/images/profile/adam.jpg"
+                name: 'Alberto',
+                surname: 'Salazar',
+                birthday: new Date(1987, 12, 24),
+                gender: 'Masculino',
+                image: 'assets/images/profile/adam.jpg'
+            },
+            contacts: {
+                email: 'Alberto@gen-el.com',
+                phone: '(034) 267-1346',
+                address: 'Tebaida'
             },
             work: {
-                company: "General Electric",
-                position: "Product manager",
-                salary: 21000
-            },
-            contacts:{
-                email: "adam@gen-el.com",
-                phone: "(224) 267-1346",
-                address: "Texas, Houston"
+                company: 'Google',
+                position: 'Product designer',
+                salary: 5000
             },
             social: {
-                facebook:"",
-                twitter:"",
-                google:""
+                facebook: '',
+                twitter: '',
+                google: ''
             },
-            settings:{
+            settings: {
                 isActive: false,
                 isDeleted: false,
-                registrationDate: "2016-11-16T12:20:20.511Z",
-                joinedDate: "2017-06-27T14:20:40.511Z"
+                registrationDate: '2016-11-16T12:20:20.511Z',
+                joinedDate: '2017-06-27T14:20:40.511Z'
             }
         },
         {
             id: 7,
-            username: "tereza.s",
-            password: "tereza123",
+            username: 'tereza.s',
+            password: 'tereza123',
             profile: {
-                name: "Tereza",
-                surname: "Stiles",
-                birthday: new Date(1979,7,9),
-                gender: "female",
-                image: "assets/images/profile/tereza.jpg"
+                name: 'Tereza',
+                surname: 'Santos',
+                birthday: new Date(1979, 7, 9),
+                gender: 'Femenino',
+                image: 'assets/images/profile/tereza.jpg'
+            },
+            contacts: {
+                email: 'tereza@airlines.com',
+                phone: '(036) 617-2614',
+                address: 'Tebaida'
             },
             work: {
-                company: "Southwest Airlines",
-                position: "Sale manager",
-                salary: 31000
-            },
-            contacts:{
-                email: "tereza@airlines.com",
-                phone: "(214) 617-2614",
-                address: "Texas, Dallas"
+                company: 'Google',
+                position: 'Product designer',
+                salary: 5000
             },
             social: {
-                facebook:"",
-                twitter:"",
-                google:""
+                facebook: '',
+                twitter: '',
+                google: ''
             },
-            settings:{
+            settings: {
                 isActive: true,
                 isDeleted: false,
-                registrationDate: "2010-10-12T16:20:20.511Z",
-                joinedDate: "2017-06-29T15:20:40.511Z"
+                registrationDate: '2010-10-12T16:20:20.511Z',
+                joinedDate: '2017-06-29T15:20:40.511Z'
             }
         },
         {
             id: 8,
-            username: "michael.b",
-            password: "michael123",
+            username: 'michael.b',
+            password: 'michael123',
             profile: {
-                name: "Michael",
-                surname: "Blair",
-                birthday: new Date(1978,11,15),
-                gender: "male",
-                image: "assets/images/profile/michael.jpg"
+                name: 'Michael',
+                surname: 'Blandon',
+                birthday: new Date(1978, 11, 15),
+                gender: 'Masculino',
+                image: 'assets/images/profile/michael.jpg'
+            },
+            contacts: {
+                email: 'michael@gmail.com',
+                phone: '(035) 388-1637',
+                address: 'Armenia'
             },
             work: {
-                company: "Microsoft",
-                position: "Software developer",
-                salary: 50000
-            },
-            contacts:{
-                email: "michael@microsoft.com",
-                phone: "(267) 388-1637",
-                address: "Pennsylvania, Philadelphia"
+                company: 'Google',
+                position: 'Product designer',
+                salary: 5000
             },
             social: {
-                facebook:"",
-                twitter:"",
-                google:""
+                facebook: '',
+                twitter: '',
+                google: ''
             },
-            settings:{
+            settings: {
                 isActive: true,
                 isDeleted: false,
-                registrationDate: "2009-08-12T16:20:20.511Z",
-                joinedDate: "2017-06-30T11:30:40.511Z"
+                registrationDate: '2009-08-12T16:20:20.511Z',
+                joinedDate: '2017-06-30T11:30:40.511Z'
             }
         },
         {
             id: 9,
-            username: "michelle.81",
-            password: "michelle123",
+            username: 'michelle.81',
+            password: 'michelle123',
             profile: {
-                name: "Michelle",
-                surname: "Ormond",
-                birthday: new Date(1981,11,18),
-                gender: "female",
-                image: "assets/images/avatars/avatar-5.png"
+                name: 'Michelle',
+                surname: 'Ortiz',
+                birthday: new Date(1981, 11, 18),
+                gender: 'Femenino',
+                image: 'assets/images/avatars/avatar-5.png'
+            },
+            contacts: {
+                email: 'michelle@starbucks.com',
+                phone: '(033) 388-1637',
+                address: 'Armenia'
             },
             work: {
-                company: "Starbucks",
-                position: "Sale manager",
-                salary: 15000
-            },
-            contacts:{
-                email: "michelle@starbucks.com",
-                phone: "(267) 388-1637",
-                address: "Washington, Seattle"
+                company: 'Google',
+                position: 'Product designer',
+                salary: 5000
             },
             social: {
-                facebook:"",
-                twitter:"",
-                google:""
+                facebook: '',
+                twitter: '',
+                google: ''
             },
-            settings:{
+            settings: {
                 isActive: false,
                 isDeleted: true,
-                registrationDate: "2012-11-10T18:20:20.511Z",
-                joinedDate: "2015-03-29T17:20:40.511Z"
+                registrationDate: '2012-11-10T18:20:20.511Z',
+                joinedDate: '2015-03-29T17:20:40.511Z'
             }
         }
-       
+
     ];
     return {users};
   }

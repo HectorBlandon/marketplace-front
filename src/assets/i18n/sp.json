@@ -9,6 +9,16 @@
     "ACOUNTDETAILS": "Detalles de la cuenta",
     "POSTALCODE": "Código postal",
     "REQUIRED": "El campo es requerido",
+    "BRANDSLOOKING": "Tenemos las marcas que busca",
+    "BRANDS": "Mostrar todas las marcas",
+    "BONUSPLUS": "BONUS PLUS",
+    "BONUSTEXT": "Acumula puntos para recibir premios",
+    "FREESHIPPING": "ENVÍO GRATIS",
+    "SHIPPINGTEXT": "Envío gratis en todos los pedidos superiores a $100.000",
+    "MONEYBACK": "PAGOS ONLINE",
+    "MONEYBACKTEXT": "Aceptamos varios medios de pagos",
+    "ONLINESUPPORT": "SOPORTE EN LÍNEA 24/7",
+    "ONLINESUPPORTTEXT": "Llámanos: 313 509 50 62",
     "LOGIN": {
       "SIGNIN": "Iniciar sesión",
       "EMAIL": "Correo electrónico",
@@ -83,16 +93,20 @@
       "SETTINGS": "Ajustes",
       "HELP": "Ayuda",
       "GALLERY": "GALERÍA",
-      "MAXIMAGEN": "(Max 8 imagenes)"
+      "MAXIMAGEN": "(Max 8 imagenes)"      
     },
     "BTN": {
       "ADD": "Agregar",
       "SAVE": "Guardar",
       "SUBMIT": "Enviar",
+      "UPDATE": "Actualizar",
+      "EDIT": "Editar",
+      "DELETE": "Eliminar",
       "CANCEL": "Cancelar",
       "UPLOAD": "Cargar",
       "REMOVE": "Eliminar",
       "CHANGE": "Cambiar",
+      "CLOSE": "Cerrar",
       "YES": "Sí",
       "NO": "No",
       "OK": "OK"
@@ -102,7 +116,9 @@
       "FILE_SIZE": "El tamaño del archivo no puede exceder los {{param}} kb."
     },
     "FIELD": { 
-      "NAME": "Nombre" 
+      "NAME": "Nombre",
+      "YOURNAME": "Nombre",
+      "EMAIL": "Correo electrónico" 
     }, 
     "PAGINATION":{
       "ITEMS_PER_PAGE": "Elementos por página:",
@@ -164,17 +180,41 @@
       "AMOUNT": "Monto"  
     },
     "EMPLOYEE": {
+      "EMPLOYEE": "Empleado",
       "EMPLOYEESLIST": "Lista empleados",
       "ADDEMPLOYEE": "Agregar empleado",
       "NUMBER": "#",
       "FULLNAME": "Nombre completo",
       "USERNAME": "Usuario",
-      "EMAIL": "Email",
       "POSITION":  "Cargo",
       "PASSWORD": "Contraseña",
       "NUMBERORDERS": "Número de ordenes",
       "REVENUE": "Ingresos",
-      "OPTIONS": "Opciones"
-
+      "OPTIONS": "Opciones",
+      "SINGNOW": "¿No tienes una cuenta? ¡Regístrate ahora!",
+      "FIRSTNAME": "Nombre",
+      "LASTNAME": "Apellido",
+      "GENDER": "Género",
+      "BORNDATE": "fecha de nacimiento",
+      "CITY": "Ciudad",
+      "ADDRESS":"Dirección Domicilio",
+      "ADDRESS2":"Dirección",
+      "EMAIL": "Correo electrónico",
+      "PASSWORDCONFIRM": "Confirmar contraseña",
+      "MOBILE": "Teléfono",
+      "PHONE": "Teléfono"
+    },
+    "CLIENT": {
+      "EDIT": "Editar",
+      "ADD":"Agregar",
+      "CLIENT": "Cliente",
+      "USERNAME": "Usuario",
+      "PASSWORD": "Contraseña",
+      "MALE": "Masculino",
+      "FEMALE": "Femenino",
+      "ACTIVE": "Activar",
+      "BLOCKED": "Bloquear",
+      "REGISTRATIONDATE": "Fecha de Registro",
+      "LASTJOIMED": "Última fecha de ingreso"
     }
   }

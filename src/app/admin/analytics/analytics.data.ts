@@ -66,7 +66,7 @@ export const sales_summary = [
 
 export const daily_views_stats = [
   {
-    name: 'Tienda 1',
+    name: 'Semana anterio',
     series: [
       {
         name: 'Dia 1',
@@ -131,7 +131,7 @@ export const daily_views_stats = [
     ]
   },
   {
-    name: 'Tienda 2',
+    name: 'Semana actual',
     series: [
       {
         name: 'Dia 1',
@@ -233,19 +233,19 @@ export const most_viewed_products = [
 
 export const transactions = [
   {
-    name: 'TProducto 1',
+    name: 'Producto 1',
     value: 40632
   },
   {
-    name: 'TProducto 2',
+    name: 'Producto 2',
     value: 49737
   },
   {
-    name: 'TProducto 3',
+    name: 'Producto 3',
     value: 36745
   },
   {
-    name: 'TProducto 4',
+    name: 'Producto 4',
     value: 36240
   },
   {
@@ -260,19 +260,19 @@ export const transactions = [
 
 export const refunds = [
   {
-    name: 'TProducto 1',
+    name: 'Producto 1',
     value: 31632
   },
   {
-    name: 'TProducto 2',
+    name: 'Producto 2',
     value: 42737
   },
   {
-    name: 'TProducto 3',
+    name: 'Producto 3',
     value: 33745
   },
   {
-    name: 'TProducto 4',
+    name: 'Producto 4',
     value: 29240
   },
   {

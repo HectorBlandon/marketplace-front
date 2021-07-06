@@ -10,11 +10,11 @@ import { Product } from "../../app.models";
 export class HomeComponent implements OnInit {
 
   public slides = [
-    { title: 'Las mejores ofertas', subtitle: 'Especial del día', image: 'assets/images/carousel/banner1.jpg' },
-    { title: 'Productos especiales', subtitle: 'Nuevos productos para ofrecerte', image: 'assets/images/carousel/banner2.jpg' },
-    { title: 'Las mejores ofertas', subtitle: 'Especial del día', image: 'assets/images/carousel/banner3.jpg' },
-    { title: 'Productos especiales', subtitle: 'Nuevos productos para ofrecerte', image: 'assets/images/carousel/banner4.jpg' },
-    { title: 'Las mejores ofertas', subtitle: 'Especial del día', image: 'assets/images/carousel/banner5.jpg' }
+    { title: '', subtitle: '', image: 'assets/images/carousel/banner1.png', button: false },
+    { title: '', subtitle: '', image: 'assets/images/carousel/banner2.png', button: true },
+    { title: '', subtitle: '', image: 'assets/images/carousel/banner3.png', button: false },
+    { title: '', subtitle: '', image: 'assets/images/carousel/banner4.png', button: true },
+    /* { title: 'Las mejores ofertas', subtitle: 'Especial del día', image: 'assets/images/carousel/banner5.png' } */
   ];
 
   public brands = [];

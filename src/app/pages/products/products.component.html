@@ -5,7 +5,7 @@
             <mat-expansion-panel expanded>
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        <h4>Categories</h4>
+                        <h4>Categorías</h4>
                     </mat-panel-title>
                 </mat-expansion-panel-header>
                 <div class="categories-wrapper categories-dropdown" perfectScrollbar>
@@ -16,12 +16,12 @@
             <mat-expansion-panel expanded>
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        <h4>Price</h4>
+                        <h4>Rango de precios</h4>
                     </mat-panel-title>
                 </mat-expansion-panel-header>
                 <div fxLayout="row" fxLayoutAlign="space-between center" class="text-muted">
-                    <span>From: <b>${{priceFrom}}</b></span>
-                    <span>To: <b>${{priceTo}}</b></span>
+                    <span>Desde: <b>${{priceFrom}}</b></span>
+                    <span>Hasta: <b>${{priceTo}}</b></span>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="space-between center" class="filter-price">
                     <mat-slider color="primary" max="2000" min="1" thumb-label="true" [(ngModel)]="priceFrom"></mat-slider>
@@ -29,7 +29,7 @@
                 </div>
             </mat-expansion-panel>
 
-            <mat-expansion-panel expanded>
+            <!-- <mat-expansion-panel expanded>
                 <mat-expansion-panel-header>
                     <mat-panel-title>
                         <h4>Color</h4>
@@ -41,9 +41,9 @@
                         <mat-icon *ngIf="color.selected">check</mat-icon>
                     </button>
                 </div>
-            </mat-expansion-panel>
+            </mat-expansion-panel> -->
 
-            <mat-expansion-panel expanded>
+            <!-- <mat-expansion-panel expanded>
                 <mat-expansion-panel-header>
                     <mat-panel-title>
                         <h4>Size</h4>
@@ -54,9 +54,9 @@
                         {{size.name}}                      
                     </button>
                 </div>
-            </mat-expansion-panel>
+            </mat-expansion-panel> -->
 
-            <mat-expansion-panel expanded>
+            <!-- <mat-expansion-panel expanded>
                 <mat-expansion-panel-header>
                     <mat-panel-title>
                         <h4>Condition</h4>
@@ -67,12 +67,12 @@
                     <mat-checkbox color="primary">Used</mat-checkbox>
                     <mat-checkbox color="primary">Not Specified</mat-checkbox>
                 </div>
-            </mat-expansion-panel>
+            </mat-expansion-panel> -->
 
             <mat-expansion-panel expanded>
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        <h4>Brands</h4>
+                        <h4>Marcas</h4>
                     </mat-panel-title>
                 </mat-expansion-panel-header>
                 <div fxLayout="row wrap" fxLayoutAlign="space-between center" class="filter-brands">                  
@@ -82,7 +82,7 @@
                 </div>
             </mat-expansion-panel>
 
-            <mat-expansion-panel expanded>
+            <!-- <mat-expansion-panel expanded>
                 <mat-expansion-panel-header>
                     <mat-panel-title>
                         <h4>Now starting at $1379</h4>
@@ -91,7 +91,7 @@
                 <div fxLayout="row wrap" fxLayoutAlign="center center">
                    <a [routerLink]="['/products/electronics']"><img src="assets/images/products/probook/2-medium.png" alt="" class="mw-100"></a>
                 </div>
-            </mat-expansion-panel>
+            </mat-expansion-panel> -->
 
         </mat-accordion>
 
@@ -115,7 +115,7 @@
             </div>
             <div>
                 <a mat-button [matMenuTriggerFor]="countsMenu" #countsMenuTrigger="matMenuTrigger">
-                    Show {{count}}<mat-icon class="mat-icon-sm caret">arrow_drop_down</mat-icon>
+                    Mostrar {{count}}<mat-icon class="mat-icon-sm caret">arrow_drop_down</mat-icon>
                 </a>
                 <mat-menu #countsMenu="matMenu" xPosition="before" class="app-dropdown" overlapTrigger="true">
                     <span (mouseleave)="countsMenuTrigger.closeMenu()">
@@ -140,7 +140,7 @@
             <div *ngFor="let product of products | paginate: { itemsPerPage: count, currentPage: page }" fxFlex="100" [fxFlex.gt-sm]="viewCol" fxFlex.sm="50" class="col">
                 <mat-card class="product-item text-center">
                     <mat-chip-list *ngIf="product.discount">
-                        <mat-chip color="warn" selected="true">{{product.discount}}% OFF</mat-chip>
+                        <mat-chip color="warn" selected="true">{{product.discount}}% Descuento</mat-chip>
                     </mat-chip-list>
                     <a [routerLink]="['/products', product.id, product.name]" class="image-link">
                         <img [src]="product.images[0].medium" alt="">
@@ -170,7 +170,7 @@
                     <div fxLayout="row wrap">
                         <div fxFlex="100" fxFlex.gt-xs="40" class="p-2">
                             <mat-chip-list *ngIf="product.discount" class="list-view">
-                                <mat-chip color="warn" selected="true">{{product.discount}}% OFF</mat-chip>
+                                <mat-chip color="warn" selected="true">{{product.discount}}% Descuento</mat-chip>
                             </mat-chip-list>
                             <a [routerLink]="['/products', product.id, product.name]" class="image-link">
                                 <img [src]="product.images[0].medium" alt="">
@@ -202,7 +202,7 @@
         <div *ngIf="products.length > 0" fxLayout="row wrap">
             <div fxFlex="100"> 
                 <mat-card class="p-0 text-center">           
-                    <pagination-controls class="product-pagination" autoHide="true" maxSize="5" (pageChange)="onPageChanged($event)"></pagination-controls>
+                    <pagination-controls class="product-pagination" previousLabel="Anterior" nextLabel="Siguiente" autoHide="true" maxSize="5" (pageChange)="onPageChanged($event)"></pagination-controls>
                 </mat-card>
             </div>
         </div>

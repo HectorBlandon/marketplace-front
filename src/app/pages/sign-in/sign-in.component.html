@@ -67,7 +67,7 @@
                     </mat-select>
                     <mat-error *ngIf="registerForm.controls.name.errors?.required || registerForm.controls.gender.value != ''">El genero es requerido</mat-error>                    
                 </mat-form-field>
-                <mat-form-field class="w-100">
+                <mat-form-field appearance="outline" class="w-100">
                     <mat-label>{{ 'SINGUPNOW.BORNDATE' | translate }}</mat-label>
                     <input matInput [matDatepicker]="birthday" placeholder="Ejemplo: 12/06/1996" formControlName="birthday">
                     <mat-datepicker-toggle matSuffix [for]="birthday"></mat-datepicker-toggle>

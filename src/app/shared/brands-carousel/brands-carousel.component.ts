@@ -11,20 +11,20 @@ export class BrandsCarouselComponent {
   @Input('brands') brands: Array<any> = [];
 
   public config: SwiperConfigInterface = { };
-  
+
   constructor() { }
 
   ngAfterViewInit(){
     this.config = {
       slidesPerView: 7,
-      spaceBetween: 16,         
+      spaceBetween: 16,
       keyboard: true,
       navigation: true,
       pagination: false,
-      grabCursor: true,  
+      grabCursor: true,
       loop: true,
       preloadImages: false,
-      lazy: true,     
+      lazy: true,
       autoplay: {
         delay: 6000,
         disableOnInteraction: false

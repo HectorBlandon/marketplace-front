@@ -6,6 +6,16 @@
   "ACOUNTDETAILS": "Account details",
   "POSTALCODE": "Postal code",
   "REQUIRED": "El campo es requerido",
+  "BRANDSLOOKING": "We've Got The Brands You're Looking For",
+  "BRANDS": "Show all brands",
+  "BONUSPLUS": "BONUS PLUS",
+  "BONUSTEXT": "Collect points to receive prizes",
+  "FREESHIPPING": "FREE SHIPPING",
+  "SHIPPINGTEXT": "Free shipping on all orders over $100.000",
+  "MONEYBACK": "MONEY BACK GUARANTEE",
+  "MONEYBACKTEXT": "We accept various means of payments",
+  "ONLINESUPPORT": "ONLINE SUPPORT 24/7",
+  "ONLINESUPPORTTEXT": "Call us: 313 509 50 62",
   "LOGIN": {
     "SIGNIN": "Sign In",
     "EMAIL": "Email",
@@ -85,9 +95,13 @@
     "SAVE": "Save",
     "SUBMIT": "Submit",
     "CANCEL": "Cancel",
+    "UPDATE": "Update",
+    "EDIT": "Edit",
+    "DELETE": "delete",
     "UPLOAD": "Upload",
     "REMOVE": "Remove",
     "CHANGE": "Change",
+    "CLOSE": "Close",
     "YES": "Yes",
     "NO": "No",
     "OK": "OK"
@@ -97,7 +111,9 @@
     "FILE_SIZE": "The file size cannot exceed {{param}} kb."
   },
   "FIELD": { 
-    "NAME": "Name" 
+    "NAME": "Name",
+    "YOURNAME": "Your name",
+    "EMAIL": "Email" 
   }, 
   "PAGINATION":{
     "ITEMS_PER_PAGE": "Items per page:",
@@ -160,6 +176,7 @@
       "AMOUNT": "Amount"
   },
   "EMPLOYEE": {
+    "EMPLOYEE": "Employee",
     "EMPLOYEESLIST": "Employees list",
     "ADDEMPLOYEE": "Add employee",
     "NUMBER": "#",
@@ -170,6 +187,29 @@
     "PASSWORD": "Password",
     "NUMBERORDERS": "number of orders",
     "REVENUE": "revenue",
-    "OPTIONS": "Options"
+    "OPTIONS": "Options",
+    "SINGNOW": "Don't have an account? Sign up now!",
+    "FIRSTNAME": "First Name",
+    "LASTNAME": "Last Name",
+    "GENDER": "Gender",
+    "BORNDATE": "Born date",
+    "CITY": "City",
+    "ADDRESS":"home address",
+    "ADDRESS2":"Address",
+    "PASSWORDCONFIRM": "Confirm password",
+    "MOBILE": "Mobile number"
+  },
+  "CLIENT": {
+    "EDIT": "Edit",
+    "ADD":"Add",
+    "CLIENT": "Client",
+    "PASSWORD": "Password",
+    "MALE": "Male",
+    "FEMALE": "Female",    
+    "ACTIVE": "Active",
+    "BLOCKED": "Blocked",
+    "REGISTRATIONDATE": "Registration date",
+    "LASTJOIMED": "Last joined date"
+
   }
 }

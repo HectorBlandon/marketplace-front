@@ -18,24 +18,28 @@ export class ProductsCarouselComponent implements OnInit {
   @Input('products') products: Array<Product> = [];
   public config: SwiperConfigInterface = {};
   public settings: Settings;
-  constructor(public appSettings:AppSettings, public appService:AppService, public dialog: MatDialog, private router: Router) { 
+  constructor(
+    public appSettings: AppSettings,
+    public appService: AppService,
+    public dialog: MatDialog,
+    private router: Router) {
     this.settings = this.appSettings.settings;
   }
 
   ngOnInit() { }
-  
-  ngAfterViewInit(){
+
+  ngAfterViewInit() {
     this.config = {
       observer: true,
       slidesPerView: 1,
-      spaceBetween: 16,       
+      spaceBetween: 16,
       keyboard: true,
       navigation: true,
       pagination: false,
-      grabCursor: true,        
+      grabCursor: true,
       loop: false,
       preloadImages: false,
-      lazy: true,  
+      lazy: true,
       breakpoints: {
         480: {
           slidesPerView: 1
@@ -56,15 +60,15 @@ export class ProductsCarouselComponent implements OnInit {
     }
   }
 
-  public openProductDialog(product){   
+  public openProductDialog(product) {
     let dialogRef = this.dialog.open(ProductDialogComponent, {
-        data: product,
-        panelClass: 'product-dialog',
-        direction: (this.settings.rtl) ? 'rtl' : 'ltr'
+      data: product,
+      panelClass: 'product-dialog',
+      direction: (this.settings.rtl) ? 'rtl' : 'ltr'
     });
     dialogRef.afterClosed().subscribe(product => {
-      if(product){
-        this.router.navigate(['/products', product.id, product.name]); 
+      if (product) {
+        this.router.navigate(['/products', product.id, product.name]);
       }
     });
   }

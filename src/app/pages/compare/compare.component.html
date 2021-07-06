@@ -1,5 +1,5 @@
 <mat-chip-list *ngIf="appService.Data.compareList.length == 0">
-    <mat-chip color="warn" selected="true">YOU HAVE NO ITEMS TO COMPARE.</mat-chip>
+    <mat-chip color="warn" selected="true">NO TIENES ARTICULOS PARA COMPARAR.</mat-chip>
 </mat-chip-list>
 
 <mat-card *ngIf="appService.Data.compareList?.length > 0" class="p-0">
@@ -26,7 +26,7 @@
 
     <div class="mat-row">
       <div class="mat-cell">
-        price
+        Precios
       </div>
       <div class="mat-cell" *ngFor="let product of appService.Data.compareList">
         <b class="new-price">${{product.newPrice | number : '1.2-2'}}</b>
@@ -38,7 +38,7 @@
         availability
       </div>
       <div class="mat-cell" *ngFor="let product of appService.Data.compareList">
-          <b class="text-muted">{{ (product.availibilityCount > 0) ? 'In stock':'Unavailable'}}</b>
+          <b class="text-muted">{{ (product.availibilityCount > 0) ? 'En stock':'Unavailable'}}</b>
       </div>
     </div>
 
@@ -93,7 +93,7 @@
       </div>
       <div class="mat-cell" *ngFor="let product of appService.Data.compareList">
         <button mat-raised-button color="primary" class="add" (click)="addToCart(product)">
-          <mat-icon>shopping_cart</mat-icon>Add to cart</button>
+          <mat-icon>shopping_cart</mat-icon>Añadir a la cesta</button>
       </div>
     </div>
 

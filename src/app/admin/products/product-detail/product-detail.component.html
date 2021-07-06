@@ -2,7 +2,7 @@
     <div fxFlex="100" fxFlex.gt-md="45"> 
         <mat-card class="product-image">
             <mat-chip-list *ngIf="product?.discount">
-                <mat-chip color="warn" selected="true">{{product?.discount}}% OFF</mat-chip>
+                <mat-chip color="warn" selected="true">{{product?.discount}}% Descuento</mat-chip>
             </mat-chip-list>
             <button mat-icon-button (click)="openZoomViewer()" fxHide="false" fxHide.gt-md><mat-icon>fullscreen</mat-icon></button>
             <img *ngIf="image" [src]="image" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave($event)"/>
@@ -30,8 +30,8 @@
 
         <h2>{{product?.name}}</h2>
         <div class="py-1 lh">
-            <p><span class="text-muted fw-500">Category: </span><span>{{ ( appService.Data.categories | filterById : product?.categoryId )?.name }}</span></p>
-            <p><span class="text-muted fw-500">Availibility: </span><span>{{ (product?.availibilityCount > 0) ? 'In stock':'Unavailable'}}</span></p>
+            <p><span class="text-muted fw-500">Categoría: </span><span>{{ ( appService.Data.categories | filterById : product?.categoryId )?.name }}</span></p>
+            <p><span class="text-muted fw-500">Disponibilidad: </span><span>{{ (product?.availibilityCount > 0) ? 'En stock':'Unavailable'}}</span></p>
         </div>                 
         <div class="py-1">
             <app-rating [ratingsCount]="product?.ratingsCount" [ratingsValue]="product?.ratingsValue" [direction]="'row'"></app-rating>
@@ -46,11 +46,11 @@
 
         <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center" class="details text-muted py-1">
             <div *ngIf="product?.color" class="color">
-                <span class="fw-500">Select Color:</span>
+                <span class="fw-500">Seleccionar el color:</span>
                 <button mat-raised-button *ngFor="let color of product?.color" [style.background]="color">&nbsp;</button>              
             </div>
             <div *ngIf="product?.size" class="size" ngClass.xs="mt-1">
-                <span class="fw-500">Select Size:</span>
+                <span class="fw-500">Selecciona el tamaño:</span>
                 <button mat-raised-button *ngFor="let size of product?.size">{{size}}</button>
             </div>
         </div>
@@ -62,7 +62,7 @@
         <div class="divider"></div>
 
         <div fxLayout="row" fxLayoutAlign="space-between center" class="text-muted py-1">
-            <button mat-button><mat-icon>mail_outline</mat-icon> Email to a Friend</button>
+            <button mat-button><mat-icon>mail_outline</mat-icon> Enviar a un amigo a Friend</button>
             <button mat-icon-button><mat-icon>share</mat-icon></button>
         </div>
 
@@ -147,7 +147,7 @@
                         <div class="divider"></div>
                         <p class="mt-2 text-muted">Your email address will not be published. Required fields are marked *</p>
                         <h3 fxLayoutAlign="start center" class="mt-2">
-                            <span>Your Rating:</span>
+                            <span>Tu clasificación:</span>
                             <button mat-icon-button matTooltip="Very Dissatisfied" matTooltipPosition="above"><mat-icon class="mat-icon-lg">sentiment_very_dissatisfied</mat-icon></button>
                             <button mat-icon-button matTooltip="Dissatisfied" matTooltipPosition="above"><mat-icon class="mat-icon-lg">sentiment_dissatisfied</mat-icon></button>
                             <button mat-icon-button matTooltip="Neutral" matTooltipPosition="above"><mat-icon class="mat-icon-lg">sentiment_neutral</mat-icon></button>

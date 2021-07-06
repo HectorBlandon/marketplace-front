@@ -164,7 +164,7 @@
             <div class="mat-header-cell">Product</div>
             <div class="mat-header-cell">Name</div>
             <div class="mat-header-cell">Unit Price</div>      
-            <div class="mat-header-cell">Quantity</div>
+            <div class="mat-header-cell">Cantidad</div>
             <div class="mat-header-cell">Total</div>
           </div>
           <div *ngFor="let product of appService.Data.cartList" class="mat-row">
@@ -328,7 +328,7 @@
         <div fxFlex="100" class="px-1">
           <mat-form-field appearance="outline" class="w-100">
               <mat-label>Address</mat-label>
-              <input matInput placeholder="Address (street, apartment, suite, unit etc.)" formControlName="address" required>
+              <input matInput placeholder="Dirección (calle, apartamento, suite, unidad, etc.)" formControlName="address" required>
               <mat-error *ngIf="billingForm.controls.address.errors?.required">Address is required</mat-error>
           </mat-form-field>
         </div>
@@ -416,7 +416,7 @@
             <div class="mat-header-cell">Product</div>
             <div class="mat-header-cell">Name</div>
             <div class="mat-header-cell">Unit Price</div>      
-            <div class="mat-header-cell">Quantity</div>
+            <div class="mat-header-cell">Cantidad</div>
             <div class="mat-header-cell">Total</div>
           </div>
           <div *ngFor="let product of appService.Data.cartList" class="mat-row">
