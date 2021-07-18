@@ -4,9 +4,10 @@ import { DecimalPipe } from '@angular/common';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductDialogComponent } from './product-dialog/product-dialog.component';
-import { Data, AppService } from '../../app.service';
+
 import { Product } from "../../app.models";
 import { Settings, AppSettings } from 'src/app/app.settings';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-products-carousel',

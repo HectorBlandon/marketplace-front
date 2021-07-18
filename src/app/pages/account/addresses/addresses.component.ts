@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AppService } from '../../../app.service';
+
 import { emailValidator, matchingPasswords } from '../../../theme/utils/app-validators';
+import { AppService } from 'src/app/app.service';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class AddressesComponent implements OnInit {
   public shippingForm: FormGroup;
   public countries = [];
   public ListCity = [];
-  constructor(public appService:AppService, public formBuilder: FormBuilder, public snackBar: MatSnackBar) { }
+  constructor(public appService: AppService, public formBuilder: FormBuilder, public snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.countries = this.appService.getCountries();
@@ -46,19 +47,19 @@ export class AddressesComponent implements OnInit {
       'address': ['', Validators.required]
     });
     this.ListCity = [
-      {description: "Circasia", value: 1},
-      {description: "Armenia", value: 2},
-      {description: "Tebaida", value: 3},
+      { description: "Circasia", value: 1 },
+      { description: "Armenia", value: 2 },
+      { description: "Tebaida", value: 3 },
     ];
   }
 
-  public onBillingFormSubmit(values:Object):void {
+  public onBillingFormSubmit(values: Object): void {
     if (this.billingForm.valid) {
       this.snackBar.open('Your billing address information updated successfully!', '×', { panelClass: 'success', verticalPosition: 'top', duration: 3000 });
     }
   }
 
-  public onShippingFormSubmit(values:Object):void {
+  public onShippingFormSubmit(values: Object): void {
     if (this.shippingForm.valid) {
       this.snackBar.open('Your shipping address information updated successfully!', '×', { panelClass: 'success', verticalPosition: 'top', duration: 3000 });
     }

@@ -1,12 +1,13 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AppService } from 'src/app/app.service';
+
 import { SwiperDirective, SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { Product } from 'src/app/app.models';
 import { ProductZoomComponent } from './product-zoom/product-zoom.component';
 import { MatDialog } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { emailValidator } from 'src/app/theme/utils/app-validators';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-product-detail',

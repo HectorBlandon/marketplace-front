@@ -55,8 +55,17 @@ export class AppService {
      * @param id_categoria id de la categoria
      * @returns OK
      */
-    public deleteCategory(idCategoria: Params): any{
-        return this.http.delete(this.urlBase + '/eliminar-categoria', idCategoria);
+    public deleteCategoria(idCategoria: Params): any{
+        return this.http.delete(this.urlBase + '/categoria/eliminar-categoria', idCategoria);
+    }
+
+    /**
+     * Servicio encargado de hacer la peticion http para actualizar una categoria
+     * @param id_categoria id de la categoria
+     * @returns OK
+     */
+     public updateCategoria(idCategoria: Params): any{
+        return this.http.put(this.urlBase + '/categoria/actualizar-categoria', idCategoria);
     }
 
     public getCategories(): Observable<Category[]>{

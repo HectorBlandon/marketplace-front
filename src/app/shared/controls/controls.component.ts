@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Data, AppService } from '../../app.service';
+import { AppService } from 'src/app/app.service';
+
 import { Product } from '../../app.models';
 
 @Component({

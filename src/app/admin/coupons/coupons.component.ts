@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from 'src/app/app.service';
+
 import { MatDialog } from '@angular/material/dialog';
 import { coupons } from './coupons';
 import { CouponDialogComponent } from './coupon-dialog/coupon-dialog.component';
 import { ConfirmDialogComponent } from 'src/app/shared/confirm-dialog/confirm-dialog.component';
 import { Category } from 'src/app/app.models';
 import { AppSettings, Settings } from 'src/app/app.settings';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-coupons',

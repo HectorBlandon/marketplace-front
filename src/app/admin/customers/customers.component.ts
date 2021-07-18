@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from 'src/app/app.service'; 
+
 import { MatDialog } from '@angular/material/dialog';
 import { CustomerDialogComponent } from './customer-dialog/customer-dialog.component';
 import { ConfirmDialogComponent } from 'src/app/shared/confirm-dialog/confirm-dialog.component';
 import { customers } from './customers';
 import { AppSettings, Settings } from 'src/app/app.settings';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-customers',

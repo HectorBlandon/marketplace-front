@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation, OnInit, Inject} from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
-import { Data, AppService } from '../../../app.service';
+import { AppService } from 'src/app/app.service';
 import { Product } from '../../../app.models';
 
 @Component({
@@ -21,15 +21,15 @@ export class ProductDialogComponent implements OnInit {
   ngAfterViewInit(){
     this.config = {
       slidesPerView: 1,
-      spaceBetween: 0,         
+      spaceBetween: 0,
       keyboard: true,
       navigation: true,
       pagination: false,
-      grabCursor: true,        
+      grabCursor: true,
       loop: false,
       preloadImages: false,
-      lazy: true, 
-      effect: "fade",
+      lazy: true,
+      effect: 'fade',
       fadeEffect: {
         crossFade: true
       }
