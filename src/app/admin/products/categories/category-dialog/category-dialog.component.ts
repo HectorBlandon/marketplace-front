@@ -3,6 +3,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AppService } from 'src/app/app.service';
 
+
 @Component({
   selector: 'app-category-dialog',
   templateUrl: './category-dialog.component.html',
@@ -20,6 +21,11 @@ export class CategoryDialogComponent implements OnInit {
   public existe = false;
   public isActive = 'N';
 
+  // Variables
+  public categoria;
+  public opcion;
+  public idCategoria;
+
   constructor(public appService: AppService, public dialogRef: MatDialogRef<CategoryDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public data: any,
               public fb: FormBuilder) { }
@@ -30,10 +36,21 @@ export class CategoryDialogComponent implements OnInit {
       active: false,
     });
 
-    if (this.data.categories) {
-      this.form.patchValue(this.data.categories);
+    if (this.data) {
+
       this.ListCategorias = this.data.categories;
+      this.opcion = this.data.option;
+
+      if (this.data.category) {
+        this.categoria = this.data.category.nombre_categoria;
+        this.idCategoria = this.data.category.id_categoria;
+      }
+
       console.log(this.ListCategorias);
+      if (this.opcion === 'edit') {
+        this.form.controls.name.setValue(this.categoria);
+        console.log(this.form.value.name);
+      }
     }
   }
 
@@ -41,7 +58,7 @@ export class CategoryDialogComponent implements OnInit {
    * Metodo en cargado de validar si existe una categoria atraves del nombre ingresado
    * @returns true, false
    */
-  public compareCategorie(): any{
+  public compareCategorie(): any {
 
     return new Promise((resolve: any, reject: any) => {
 
@@ -61,7 +78,7 @@ export class CategoryDialogComponent implements OnInit {
    * Metodo encargado de crear una categoria y realizar las validaciones correspondientes para
    * la creacion de una categoria
    */
-  public onSubmit(): any{
+  public onSubmit(): any {
     console.log(this.form.value);
     if (this.form.valid) {
 
@@ -80,23 +97,37 @@ export class CategoryDialogComponent implements OnInit {
             this.isActive = 'Y';
           }
 
-          const dataCategorie = {
-            nombre_categoria: this.form.value.name,
-            activo: this.isActive
-          };
-          console.log('dataCategorie', dataCategorie);
+          if (this.opcion === 'create') {
 
-          /* Se consume el servicio que permite crear una categoria */
-          this.appService.crearCategoria(dataCategorie).subscribe((data): any => {
+            const dataCategorie = {
+              nombre_categoria: this.form.value.name,
+              activo: this.isActive
+            };
+            console.log('dataCategorie', dataCategorie);
+            this.appService.crearCategoria(dataCategorie).subscribe((data): any => {
 
-            if (data !== undefined || data !== null){
-              this.dialogRef.close(true);
-              console.log('Categorias Crear API', data);
-            }
+              if (data !== undefined || data !== null) {
+                this.dialogRef.close(true);
+                console.log('Categorias Crear API', data);
+              }
 
-          }, (error) => {
-            console.log('ERROR:', error);
-          });
+            }, (error) => {
+              console.log('ERROR:', error);
+            });
+
+          } else if (this.opcion === 'edit') {
+            const data = {
+              dataCategorie: {
+                nombre_categoria: this.form.value.name,
+                activo: this.isActive
+              },
+              idCategoria: this.idCategoria
+            };
+            console.log('dataCategorie', data);
+            this.appService.updateCategoria(data).subscribe((response): any => {
+              console.log(response);
+            });
+          }
 
         }
 

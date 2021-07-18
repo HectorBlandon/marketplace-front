@@ -1,5 +1,5 @@
 <h1 mat-dialog-title>Categoría</h1>
-<form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+<form [formGroup]="form" autocomplete="off">
     <div mat-dialog-content>
         <div fxLayout="row wrap">
             <div fxFlex="100">
@@ -8,17 +8,7 @@
                     <input matInput formControlName="name" required>
                     <mat-error *ngIf="form.controls.name.errors?.required">{{'REQUIRED' | translate}}</mat-error> 
                 </mat-form-field>
-            </div> 
-            <!-- <div fxFlex="100">
-                <mat-form-field appearance="outline" class="w-100">
-                    <mat-label>{{'CATEGORIES.PARENTCATEGORY' | translate}}</mat-label>
-                    <mat-select formControlName="parentId">
-                        <mat-option *ngFor="let cat of data.categories" [value]="cat.id">
-                            <span>{{cat.name}}</span>
-                        </mat-option>
-                    </mat-select> 
-                </mat-form-field>
-            </div>  -->
+            </div>
             <div fxFlex="100" class="py-1">    
                 <mat-checkbox formControlName="active" color="primary">{{'CATEGORIES.ACTIVE' | translate}}</mat-checkbox>
             </div> 
@@ -27,7 +17,7 @@
     <div mat-dialog-actions>
         <div fxLayout="row" fxLayoutAlign="space-between center" class="w-100"> 
             <button mat-raised-button color="warn" type="button" mat-dialog-close>{{'BTN.CANCEL' | translate}}</button>
-            <button mat-raised-button color="primary" type="submit">{{'BTN.SAVE' | translate}}</button>
+            <button mat-raised-button color="primary" type="submit" (click)="onSubmit()" [disabled]="form.invalid">{{'BTN.SAVE' | translate}}</button>
         </div> 
     </div>
     <div mat-dialog-actions>
