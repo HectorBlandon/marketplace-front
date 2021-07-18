@@ -13,6 +13,7 @@ import { ProductZoomComponent } from './product-detail/product-zoom/product-zoom
 import { CategoriesComponent } from './categories/categories.component';
 import { CategoryDialogComponent } from './categories/category-dialog/category-dialog.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { ProductService } from '../../services/product/product.service';
 
 export const routes = [ 
   { path: '', redirectTo: 'product-list', pathMatch: 'full'},
@@ -41,6 +42,7 @@ export const routes = [
     NgxPaginationModule,
     SwiperModule,
     InputFileModule
-  ]
+  ],
+  providers: [ProductService]
 })
 export class ProductsModule { }

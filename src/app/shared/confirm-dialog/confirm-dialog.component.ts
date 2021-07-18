@@ -1,6 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { AppService } from '../../app.service';
+import { AppService } from 'src/app/app.service';
+
+
 
 @Component({
   selector: 'app-confirm-dialog',
@@ -24,7 +26,7 @@ export class ConfirmDialogComponent implements OnInit {
 
   public deleteCategorie(): any{
 
-    this.appService.deleteCategory(this.category.id_categoria).subscribe((data): any => {
+    this.appService.deleteCategoria(this.category.id_categoria).subscribe((data): any => {
 
       console.log(data);
     });

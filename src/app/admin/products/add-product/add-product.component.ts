@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { AppService } from 'src/app/app.service';
+
 import { Category } from 'src/app/app.models';
 import { ActivatedRoute } from '@angular/router';
+import { AppService } from 'src/app/app.service';
+import { ProductService } from 'src/app/services/product/product.service';
 
 @Component({
   selector: 'app-add-product',
@@ -10,47 +12,52 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent implements OnInit {
+  // Formulario
   public form: FormGroup;
-  public colors = ['#5C6BC0', '#66BB6A', '#EF5350', '#BA68C8', '#FF4081', '#9575CD', '#90CAF9', '#B2DFDB', '#DCE775', '#FFD740', '#00E676', '#FBC02D', '#FF7043', '#F5F5F5', '#696969'];
-  public sizes = ['S', 'M', 'L', 'XL', '2XL', '32', '36', '38', '46', '52', '13.3"', '15.4"', '17"', '21"', '23.4"'];
+
+  // Variables
+  public isActive = 'N';
   public selectedColors: string;
   public categories: Category[];
   private sub: any;
   public id: any;
 
-  constructor(public appService: AppService, public formBuilder: FormBuilder, private activatedRoute: ActivatedRoute ) { }
+  constructor(
+    public appService: AppService, public productService: ProductService,
+    public formBuilder: FormBuilder, private activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      'name': [null, Validators.compose([Validators.required, Validators.minLength(4)])],
-      'images': [null, Validators.required],
-      'oldPrice': [null, Validators.required],
-      'newPrice': [null, Validators.required ],
-      'discount': [null, Validators.required],
-      'description': [null, Validators.required],
-      'availibilityCount': [null, Validators.required],
-      'color': null,
-      'size': null,
-      'weight': null,
-      'categoryId': [null, Validators.required ]
+      name: [null, Validators.compose([Validators.required, Validators.minLength(4)])],
+      brand: [null, Validators.required],
+      images: [null],
+      newPrice: [null, Validators.required],
+      description: [null, Validators.required],
+      availibilityCount: [null, Validators.required],
+      categoryId: [null, Validators.required],
+      reference: [null],
+      active: [null]
     });
     this.getCategories();
     this.sub = this.activatedRoute.params.subscribe(params => {
-      if (params['id']){
-        this.id = params['id'];
+      if (params.id) {
+        this.id = params.id;
         this.getProductById();
       }
     });
   }
 
   public getCategories() {
-    this.appService.getCategories().subscribe(data => {
+    this.appService.getCategorias().subscribe(data => {
       this.categories = data;
       this.categories.shift();
     });
   }
 
-  public getProductById(){
+
+
+  public getProductById() {
     this.appService.getProductById(this.id).subscribe((data: any) => {
       this.form.patchValue(data);
       this.selectedColors = data.color;
@@ -66,12 +73,33 @@ export class AddProductComponent implements OnInit {
     });
   }
 
-  public onSubmit(){
+  public onSubmit(): any {
     console.log(this.form.value);
+
+    if (this.form.value.active === true) {
+      this.isActive = 'Y';
+    }
+
+    const data = {
+      nombre_producto: this.form.value.name,
+      cantidad: this.form.value.availibilityCount,
+      descripcion: this.form.value.description,
+      activo: this.isActive,
+      marca: this.form.value.brand,
+      precio: this.form.value.newPrice,
+      sku: 'ewsdc7we7ed76edw',
+      categoriaEntity: this.form.value.categoryId.id_categoria,
+    };
+    console.log('Data a enviar', data);
+
+    this.productService.crearProducto(data).subscribe((datos): any => {
+      console.log('respuesta  servicio producto', datos);
+    });
+
   }
 
-  public onColorSelectionChange(event: any ){
-    if (event.value){
+  public onColorSelectionChange(event: any) {
+    if (event.value) {
       this.selectedColors = event.value.join();
     }
   }
