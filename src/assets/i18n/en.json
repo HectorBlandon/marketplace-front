@@ -137,7 +137,7 @@
     "REFUNDSPRODUCTS": "Refunds by Products"
   },
   "CATEGORIES": {
-    "SUBCATEGORY": "Subcategory",
+    "ACTIVE": "Active",
     "CATEGORYLIST": "Category List",
     "CATEGORY": "Category",
     "NAME": "Name",

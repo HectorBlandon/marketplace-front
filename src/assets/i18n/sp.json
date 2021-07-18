@@ -142,7 +142,7 @@
       "REFUNDSPRODUCTS": "Reembolsos por productos"
     },
     "CATEGORIES": {
-      "SUBCATEGORY": "Subcategotía",
+      "ACTIVE": "Activar",
       "CATEGORYLIST": "Lista categorías",
       "NAME": "Nombre",
       "PARENTCATEGORY": "Categoría principal",
