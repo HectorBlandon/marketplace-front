@@ -148,14 +148,11 @@
   },
   "PRODUCT": {
     "NAME": "Name",
+    "BRAND": "Brand",
+    "REFERENCE": "Reference",
     "CATEGORY": "Category",
-    "OLDPRICE": "Old price",
     "NEWPRICE": "New price",
-    "DISCOUNT": "Discount",
     "AVALBILITYCOUN": "Avalibility count",
-    "PRODUCTCOLOR": "Color",
-    "PRODUCTSIZE": "Size",
-    "WEIGTH": "Weigth",
     "DESCRIPTION": "Description"
   },
   "ORDERS": {
