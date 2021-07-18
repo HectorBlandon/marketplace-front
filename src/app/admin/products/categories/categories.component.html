@@ -2,7 +2,7 @@
     <mat-card class="p-0"> 
         <div fxLayout="row wrap" fxLayoutAlign="space-between center" class="w-100 p-2">
             <h2>{{'CATEGORIES.CATEGORYLIST' | translate}}</h2> 
-            <button mat-raised-button color="primary" (click)="openCategoryDialog(null)">{{'CATEGORIES.ADDCATEGORY' | translate}}</button>
+            <button mat-raised-button color="primary" (click)="openCategoryDialog('create', null)">{{'CATEGORIES.ADDCATEGORY' | translate}}</button>
         </div>
         <mat-divider></mat-divider>
         <div class="mat-table admin-table">
@@ -21,7 +21,7 @@
                 
                 <div class="mat-cell" style="text-align: center;">
                     <div class="p-1 actions">          
-                        <button mat-mini-fab color="primary" matTooltip="Editar" (click)="openCategoryDialog(cat)">
+                        <button mat-mini-fab color="primary" matTooltip="Editar" (click)="openCategoryDialog('edit',cat)">
                             <mat-icon>edit</mat-icon>
                         </button>
                         <button mat-mini-fab color="warn" matTooltip="Eliminar" class="mx-1" (click)="remove(cat)">
@@ -33,10 +33,10 @@
         </div>
     </mat-card>
 
-    <div *ngIf="categories.length > 0" fxLayout="row wrap">
+    <div fxLayout="row wrap">
         <div fxFlex="100"> 
             <mat-card class="p-0 text-center">           
-                <pagination-controls class="product-pagination" autoHide="true" maxSize="5" (pageChange)="onPageChanged($event)"></pagination-controls>
+                <pagination-controls class="product-pagination" previousLabel="Anterior" nextLabel="Siguiente" autoHide="true" maxSize="5" (pageChange)="onPageChanged($event)"></pagination-controls>
             </mat-card>
         </div>
     </div>

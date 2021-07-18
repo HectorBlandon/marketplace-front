@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/app.models';
-import { AppService } from 'src/app/app.service';
+
 import { CategoryDialogComponent } from './category-dialog/category-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from 'src/app/shared/confirm-dialog/confirm-dialog.component';
 import { AppSettings, Settings } from 'src/app/app.settings';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-categories',
@@ -38,6 +39,10 @@ export class CategoriesComponent implements OnInit {
     });
   }
 
+  /**
+   * 
+   * @param event Metodo encargado del paginador
+   */
   public onPageChanged(event): any{
     this.page = event;
     window.scrollTo(0, 0);
@@ -47,10 +52,11 @@ export class CategoriesComponent implements OnInit {
    *  Metodo encargado de mostrar el modal para crear una categoria o editarla
    * @param data
    */
-  public openCategoryDialog(data: any): any{
+  public openCategoryDialog(type: any, category: any): any{
     const dialogRef = this.dialog.open(CategoryDialogComponent, {
       data: {
-        /* category: data, */
+        option: type,
+        category,
         categories: this.categorias
       },
       panelClass: ['theme-dialog'],
