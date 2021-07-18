@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { AppService } from '../../app.service';
 
 @Component({
   selector: 'app-confirm-dialog',
@@ -8,19 +9,34 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class ConfirmDialogComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<ConfirmDialogComponent>,
+  public category;
+
+  constructor(public appService: AppService, public dialogRef: MatDialogRef<ConfirmDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
+
+    if (this.data.category) {
+      this.category = this.data.category;
+      console.log(this.category);
+    }
   }
 
-  onConfirm(): void { 
+  public deleteCategorie(): any{
+
+    this.appService.deleteCategory(this.category.id_categoria).subscribe((data): any => {
+
+      console.log(data);
+    });
+
+  }
+
+  onConfirm(): void {
     this.dialogRef.close(true);
   }
 
-  onDismiss(): void { 
+  onDismiss(): void {
     this.dialogRef.close(false);
   }
 
 }
- 

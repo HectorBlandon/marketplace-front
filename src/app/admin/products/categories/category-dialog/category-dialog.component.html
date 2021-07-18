@@ -9,7 +9,7 @@
                     <mat-error *ngIf="form.controls.name.errors?.required">{{'REQUIRED' | translate}}</mat-error> 
                 </mat-form-field>
             </div> 
-            <div fxFlex="100">
+            <!-- <div fxFlex="100">
                 <mat-form-field appearance="outline" class="w-100">
                     <mat-label>{{'CATEGORIES.PARENTCATEGORY' | translate}}</mat-label>
                     <mat-select formControlName="parentId">
@@ -18,9 +18,9 @@
                         </mat-option>
                     </mat-select> 
                 </mat-form-field>
-            </div> 
+            </div>  -->
             <div fxFlex="100" class="py-1">    
-                <mat-checkbox formControlName="hasSubCategory" color="primary">{{'CATEGORIES.SUBCATEGORY' | translate}}</mat-checkbox>
+                <mat-checkbox formControlName="active" color="primary">{{'CATEGORIES.ACTIVE' | translate}}</mat-checkbox>
             </div> 
         </div>
     </div>
@@ -29,5 +29,10 @@
             <button mat-raised-button color="warn" type="button" mat-dialog-close>{{'BTN.CANCEL' | translate}}</button>
             <button mat-raised-button color="primary" type="submit">{{'BTN.SAVE' | translate}}</button>
         </div> 
+    </div>
+    <div mat-dialog-actions>
+        <div  fxLayout="row" fxLayoutAlign="center center" class="w-100">
+            <h3 *ngIf="existe == true" style="color: red;">Ya existe la categoria</h3>
+        </div>
     </div>
 </form>

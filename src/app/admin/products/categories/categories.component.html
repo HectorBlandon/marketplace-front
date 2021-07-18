@@ -6,21 +6,20 @@
         </div>
         <mat-divider></mat-divider>
         <div class="mat-table admin-table">
-            <div class="mat-header-row">
-                <div class="mat-header-cell">{{'CATEGORIES.NAME' | translate}}</div>
-                <div class="mat-header-cell">{{'CATEGORIES.SUBCATEGORY' | translate}}</div> 
-                <div class="mat-header-cell">{{'CATEGORIES.PARENTCATEGORY' | translate}}</div> 
-                <div class="mat-header-cell"></div>
+            <div class="mat-header-row" style="align-items: center;">
+                <div class="mat-header-cell">N°</div>
+                <div class="mat-header-cell" style="text-align: center;">{{'CATEGORIES.NAME' | translate}}</div>
+                <div class="mat-header-cell" style="text-align: center;">Activo</div>
+                <div class="mat-header-cell" style="text-align: center;">Opciones</div>
             </div>
-            <div *ngFor="let cat of categories | paginate: { itemsPerPage: count, currentPage: page }" class="mat-row">
-                <div class="mat-cell">{{cat.name}}</div>
-                <div class="mat-cell">
-                    <mat-icon class="text-muted">{{ (cat.hasSubCategory) ? 'check_box' : 'check_box_outline_blank'}}</mat-icon> 
-                </div>  
-                <div class="mat-cell">
-                    {{ ( categories | filterById : cat.parentId )?.name }}
-                </div>   
-                <div class="mat-cell">
+            <div *ngFor="let cat of categorias | paginate: { itemsPerPage: count, currentPage: page }" class="mat-row">
+                <div class="mat-cell">{{cat.id_categoria}}</div>
+                <div class="mat-cell" style="text-align: center;">{{cat.nombre_categoria}}</div>
+                <div class="mat-cell" style="text-align: center;">
+                    <mat-icon class="text-muted" >{{ (cat.activo == 'Y') ? 'check_box' : 'check_box_outline_blank'}}</mat-icon>                    
+                </div>
+                
+                <div class="mat-cell" style="text-align: center;">
                     <div class="p-1 actions">          
                         <button mat-mini-fab color="primary" matTooltip="Editar" (click)="openCategoryDialog(cat)">
                             <mat-icon>edit</mat-icon>

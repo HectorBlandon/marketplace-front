@@ -12,71 +12,81 @@ import { AppSettings, Settings } from 'src/app/app.settings';
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
-  public categories:Category[] = []; 
+  public categories: Category[] = [];
+  public categorias;
   public page: any;
   public count = 6;
-  public settings:Settings;
-  constructor(public appService: AppService, public dialog: MatDialog, public appSettings:AppSettings) {
+  public settings: Settings;
+  constructor(public appService: AppService, public dialog: MatDialog, public appSettings: AppSettings) {
     this.settings = this.appSettings.settings;
   }
 
   ngOnInit(): void {
-    this.getCategories();
+    this.ListarCategorias();
   }
 
-  public getCategories(){   
-    this.appService.getCategories().subscribe(data => {
-      this.categories = data; 
-      this.categories.shift();
-    }); 
+
+  /**
+   *  Metodo encargado de recibir la respuesta del servicio que obtiene las lista de las categorias
+   */
+  public ListarCategorias(): any{
+    this.appService.getCategorias().subscribe((data: any) => {
+      this.categorias = data;
+      console.log('Categorias API', data);
+    }, (error) => {
+      console.log('ERROR:', error);
+    });
   }
 
-  public onPageChanged(event){
-    this.page = event; 
-    window.scrollTo(0,0); 
+  public onPageChanged(event): any{
+    this.page = event;
+    window.scrollTo(0, 0);
   }
 
-  public openCategoryDialog(data:any){
+  /**
+   *  Metodo encargado de mostrar el modal para crear una categoria o editarla
+   * @param data
+   */
+  public openCategoryDialog(data: any): any{
     const dialogRef = this.dialog.open(CategoryDialogComponent, {
       data: {
-        category: data,
-        categories: this.categories
+        /* category: data, */
+        categories: this.categorias
       },
       panelClass: ['theme-dialog'],
       autoFocus: false,
       direction: (this.settings.rtl) ? 'rtl' : 'ltr'
     });
-    dialogRef.afterClosed().subscribe(category => { 
-      if(category){    
-        const index: number = this.categories.findIndex(x => x.id == category.id);
-        if(index !== -1){
-          this.categories[index] = category;
-        } 
-        else{ 
-          let last_category = this.categories[this.categories.length - 1]; 
-          category.id = last_category.id + 1;
-          this.categories.push(category);  
-        }          
+    dialogRef.afterClosed().subscribe(res => {
+
+      if (res === true) {
+        this.ListarCategorias();
       }
     });
   }
 
-  public remove(category:any){  
+
+  /**
+   * Metodo encargado de mostrar el modal que permite eliminar una categoria
+   * @param category objeto categoria
+   */
+  public remove(category: any): any{
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
-      maxWidth: "400px",
+      maxWidth: '400px',
       data: {
-        title: "Confirm Action",
-        message: "Are you sure you want remove this category?"
+        category,
+        title: 'Confirmar acción',
+        message: `¿Estás seguro de que quieres eliminar la categoría ${category.nombre_categoria}? `
       }
-    }); 
-    dialogRef.afterClosed().subscribe(dialogResult => { 
-      if(dialogResult){
+    });
+    dialogRef.afterClosed().subscribe(dialogResult => {
+      if (dialogResult){
         const index: number = this.categories.indexOf(category);
         if (index !== -1) {
-          this.categories.splice(index, 1);  
-        } 
-      } 
-    }); 
+          this.categories.splice(index, 1);
+        }
+      }
+    });
   }
 
 }
