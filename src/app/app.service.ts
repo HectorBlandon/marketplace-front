@@ -68,6 +68,8 @@ export class AppService {
         return this.http.put(this.urlBase + '/categoria/actualizar-categoria', idCategoria);
     }
 
+    /* ---------------------------- ----------------------------- -------------------- */
+
     public getCategories(): Observable<Category[]>{
         return this.http.get<Category[]>(this.url + 'categories.json');
     }
