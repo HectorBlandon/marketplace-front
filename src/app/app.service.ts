@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Category, Product } from './app.models';
 import { environment } from 'src/environments/environment';
+import { Params } from '@angular/router';
 
 export class Data {
     constructor(public categories: Category[],
@@ -23,11 +24,40 @@ export class AppService {
         [],  // cartList
         null, // totalPrice,
         0 // totalCartCount
-    )
+    );
 
     public url = environment.url + '/assets/data/';
 
+    /* variable encarga de obtner la URL para la conexion al API */
+    public urlBase = environment.urlBase;
+
     constructor(public http: HttpClient, public snackBar: MatSnackBar) { }
+
+    /**
+     *
+     * @param data Servicio encargado de hacer la peticion http para la creacion de una categoria
+     * @returns objeto con la categoria creada
+     */
+    public crearCategoria(data): any{
+        return this.http.post(this.urlBase + '/categoria/crear-categoria', data);
+    }
+
+    /**
+     * Servicio encargado de hacer la peticion http para obtener todas las categoria
+     * @returns lista de las categorias
+     */
+    public getCategorias(): any {
+        return this.http.get(this.urlBase + '/categoria/listar-categoria');
+    }
+
+    /**
+     * Servicio encargado de hacer la peticion http para eliminar una categoria
+     * @param id_categoria id de la categoria
+     * @returns OK
+     */
+    public deleteCategory(idCategoria: Params): any{
+        return this.http.delete(this.urlBase + '/eliminar-categoria', idCategoria);
+    }
 
     public getCategories(): Observable<Category[]>{
         return this.http.get<Category[]>(this.url + 'categories.json');
@@ -392,7 +422,7 @@ export class AppService {
     }
 
     public getYears(){
-        return ["2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030" ]
+        return ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030' ]
     }
 
     public getDeliveryMethods(){
