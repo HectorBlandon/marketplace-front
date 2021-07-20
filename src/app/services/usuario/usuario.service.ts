@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class CommonsService {
+export class UsuarioService {
 
   /* variable encarga de obtner la URL para la conexion al API */
   public urlBase = environment.urlBase;
@@ -14,10 +14,11 @@ export class CommonsService {
   constructor(public http: HttpClient, public snackBar: MatSnackBar) { }
 
  /**
-  * Servicio encargado de hacer la peticion http para obtener todas las ciudades
-  * @returns lista de las ciudades
+  * Servicio encargado de hacer la peticion http para la creacion de un producto
+  * @param data objeto con la producto a crear
+  * @returns objeto de tipo producto
   */
-  public getCiudades(): any {
-    return this.http.get(this.urlBase + '/ciudad/listar-ciudad');
+  public crearUsuario(data): any {
+    return this.http.post(this.urlBase + '/usuario/crear-usuario', data);
   }
 }
