@@ -6,6 +6,7 @@ import { FilterBrandsPipe } from './filter-brands.pipe';
 import { BrandSearchPipe } from './brand-search.pipe';
 import { ProfilePicturePipe } from './profilePicture.pipe';
 import { UserSearchPipe } from './user-search.pipe';
+import { CurrentPipe } from './current.pipe';
 
 @NgModule({
     imports: [ 
@@ -16,7 +17,8 @@ import { UserSearchPipe } from './user-search.pipe';
         FilterBrandsPipe,
         BrandSearchPipe,
         ProfilePicturePipe,
-        UserSearchPipe
+        UserSearchPipe,
+        CurrentPipe
     ],
     exports: [
         FilterByIdPipe,

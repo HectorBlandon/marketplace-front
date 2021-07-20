@@ -14,6 +14,8 @@ import { CategoriesComponent } from './categories/categories.component';
 import { CategoryDialogComponent } from './categories/category-dialog/category-dialog.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ProductService } from '../../services/product/product.service';
+import { BrMaskerModule } from 'br-mask';
+import { CurrentPipe } from '../../theme/pipes/current.pipe';
 
 export const routes = [ 
   { path: '', redirectTo: 'product-list', pathMatch: 'full'},
@@ -41,8 +43,9 @@ export const routes = [
     SharedModule,
     NgxPaginationModule,
     SwiperModule,
-    InputFileModule
+    InputFileModule,
+    BrMaskerModule
   ],
-  providers: [ProductService]
+  providers: [ProductService, CurrentPipe]
 })
 export class ProductsModule { }

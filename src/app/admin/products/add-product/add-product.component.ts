@@ -5,6 +5,7 @@ import { Category } from 'src/app/app.models';
 import { ActivatedRoute } from '@angular/router';
 import { AppService } from 'src/app/app.service';
 import { ProductService } from 'src/app/services/product/product.service';
+import { CurrentPipe } from '../../../theme/pipes/current.pipe';
 
 @Component({
   selector: 'app-add-product',
@@ -24,7 +25,8 @@ export class AddProductComponent implements OnInit {
 
   constructor(
     public appService: AppService, public productService: ProductService,
-    public formBuilder: FormBuilder, private activatedRoute: ActivatedRoute
+    public formBuilder: FormBuilder, private activatedRoute: ActivatedRoute,
+    public micurrencypipe: CurrentPipe,
   ) { }
 
   ngOnInit(): void {
@@ -48,10 +50,13 @@ export class AddProductComponent implements OnInit {
     });
   }
 
-  public getCategories() {
+  public getCategories(): any {
     this.appService.getCategorias().subscribe(data => {
-      this.categories = data;
-      this.categories.shift();
+      console.log('Categorias select', data);
+      this.categories = data.filter(
+        CateActiva => {
+          return CateActiva.activo === 'Y';
+        });
     });
   }
 
@@ -80,13 +85,16 @@ export class AddProductComponent implements OnInit {
       this.isActive = 'Y';
     }
 
+    const cantidadProducto = this.micurrencypipe.parse(this.form.value.availibilityCount);
+    const precioProducto = this.micurrencypipe.parse(this.form.value.newPrice);
+
     const data = {
       nombre_producto: this.form.value.name,
-      cantidad: this.form.value.availibilityCount,
+      cantidad: Number(cantidadProducto),
       descripcion: this.form.value.description,
       activo: this.isActive,
       marca: this.form.value.brand,
-      precio: this.form.value.newPrice,
+      precio: Number(precioProducto),
       sku: 'ewsdc7we7ed76edw',
       categoriaEntity: this.form.value.categoryId.id_categoria,
     };

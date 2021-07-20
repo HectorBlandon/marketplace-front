@@ -54,7 +54,7 @@
                         <div fxFlex="100" fxFlex.gt-sm="50" class="px-1">
                             <mat-form-field appearance="outline" class="w-100">
                                 <mat-label>{{'PRODUCT.NEWPRICE' | translate}}</mat-label>
-                                <input matInput formControlName="newPrice" required>
+                                <input matInput formControlName="newPrice" [brmasker]="{money: true, thousand: '.',  decimalCaracter: ',', decimal: '2'}" required>
                                 <mat-error *ngIf="form.controls.newPrice.errors?.required">{{'REQUIRED' | translate}}
                                 </mat-error>
                             </mat-form-field>
@@ -63,7 +63,7 @@
                         <div fxFlex="100" fxFlex.gt-sm="50" class="px-1">
                             <mat-form-field appearance="outline" class="w-100">
                                 <mat-label>{{'PRODUCT.AVALBILITYCOUN' | translate}}</mat-label>
-                                <input matInput formControlName="availibilityCount" type="number">
+                                <input matInput formControlName="availibilityCount" [brmasker] = " {numberAndTousand: true, mil: ','} " required>
                                 <mat-error *ngIf="form.controls.availibilityCount.errors?.required">{{'REQUIRED' |
                                     translate}}</mat-error>
                             </mat-form-field>
@@ -83,7 +83,7 @@
                         </div> 
 
                         <div fxFlex="100" class="mt-2 text-center w-100">
-                            <button mat-raised-button color="primary" type="submit" (click)="onSubmit()" >{{'BTN.ADD' | translate}}</button>
+                            <button mat-raised-button color="primary" type="submit" (click)="onSubmit()" [disabled]="form.invalid">{{'BTN.ADD' | translate}}</button>
                         </div>
                     </div>
                 </div>
