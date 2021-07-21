@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "emporium": {
+    "primates": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -93,18 +93,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "emporium:build"
+            "browserTarget": "primates:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "emporium:build:production"
+              "browserTarget": "primates:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "emporium:build"
+            "browserTarget": "primates:build"
           }
         },
         "test": {
@@ -142,11 +142,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "emporium:serve"
+            "devServerTarget": "primates:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "emporium:serve:production"
+              "devServerTarget": "primates:serve:production"
             }
           }
         },
@@ -176,21 +176,21 @@
         "serve-ssr": {
           "builder": "@nguniversal/builders:ssr-dev-server",
           "options": {
-            "browserTarget": "emporium:build",
-            "serverTarget": "emporium:server"
+            "browserTarget": "primates:build",
+            "serverTarget": "primates:server"
           },
           "configurations": {
             "production": {
-              "browserTarget": "emporium:build:production",
-              "serverTarget": "emporium:server:production"
+              "browserTarget": "primates:build:production",
+              "serverTarget": "primates:server:production"
             }
           }
         },
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "browserTarget": "emporium:build:production",
-            "serverTarget": "emporium:server:production",
+            "browserTarget": "primates:build:production",
+            "serverTarget": "primates:server:production",
             "routes": [
               "/"
             ]
@@ -202,5 +202,5 @@
       }
     } 
   },
-  "defaultProject": "emporium"
+  "defaultProject": "primates"
 }
