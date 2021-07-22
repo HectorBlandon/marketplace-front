@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: '',
+  url: 'https://backend-primates.herokuapp.com',
   urlBase: 'https://backend-primates.herokuapp.com',
 };
 
