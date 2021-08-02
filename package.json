@@ -2,18 +2,14 @@
   "name": "primates",
   "version": "1.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "compile:server": "webpack -- config webpack.server.config.js --progress --colors",
-    "serve:ssr": "node dist/server",
-    "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
-    "build:client-and-server-bundles": "ng build --prod && ng run primates:server:production --bundleDependencies all",
-    "start:heroku": "node dist/server",
-    "postinstall": "ng build --prod"
+         "ng": "ng",
+        "start": "ng serve --proxy-config proxy.conf.json ",
+        "build": "ng build",
+        "test": "ng test",
+        "lint": "ng lint",
+        "e2e": "ng e2e",
+        "lite": "lite-server",
+        "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
