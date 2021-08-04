@@ -50,6 +50,9 @@ export class CategoryDialogComponent implements OnInit {
       if (this.opcion === 'edit') {
         this.form.controls.name.setValue(this.categoria);
         console.log(this.form.value.name);
+      } else if (this.opcion === 'delete') {
+        this.form.controls.name.setValue(this.categoria);
+        console.log(this.form.value.name);
       }
     }
   }
@@ -125,6 +128,19 @@ export class CategoryDialogComponent implements OnInit {
             };
             console.log('dataCategorie', data);
             this.appService.updateCategoria(data).subscribe((response): any => {
+              console.log(response);
+            });
+          } else if (this.opcion === 'delete') {
+            const data = {
+              dataCategorie: {
+                nombre_categoria: this.form.value.name,
+                idCategoria: this.idCategoria,
+                activo: this.isActive
+              },
+              idCategoria: this.idCategoria
+            };
+            console.log('dataCategorie', data);
+            this.appService.deleteCategoria(data).subscribe((response): any => {
               console.log(response);
             });
           }
